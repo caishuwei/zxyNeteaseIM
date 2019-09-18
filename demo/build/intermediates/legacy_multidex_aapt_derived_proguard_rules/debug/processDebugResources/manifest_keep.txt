@@ -1,0 +1,2 @@
+# Referenced at D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:111
+-keep class com.netease.nim.demo.NimApplication { <init>(...); }
