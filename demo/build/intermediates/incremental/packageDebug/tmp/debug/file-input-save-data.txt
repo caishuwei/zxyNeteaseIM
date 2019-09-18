@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Sep 18 17:26:22 CST 2019
+#Wed Sep 18 18:02:53 CST 2019
 20.base=D\:\\Develop\\Android\\workspacesModule\\zxyNeteaseIM\\demo\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
 143.base=D\:\\Develop\\Android\\workspacesModule\\zxyNeteaseIM\\demo\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
 237.path=emoji/default/emoji_16.png

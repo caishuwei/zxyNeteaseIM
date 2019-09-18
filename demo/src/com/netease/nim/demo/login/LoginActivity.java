@@ -1,4 +1,4 @@
-package com.netease.nim.demo.login;
+        package com.netease.nim.demo.login;
 
 import android.Manifest;
 import android.content.Context;

@@ -124,9 +124,14 @@
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="09fd4efd3e28e9bf1f449ecec7d34bfe" />
+
+        <!-- <meta-data -->
+        <!-- android:name="com.netease.nim.appKey" -->
+        <!-- android:value="45c6af3c98409b18a84451215d0bdd6e"/> -->
+        <!-- MSG 网易云信 appKey -->
         <meta-data
             android:name="com.netease.nim.appKey"
-            android:value="45c6af3c98409b18a84451215d0bdd6e" />
+            android:value="3548849ced7f34fd938ca3de82fa380c" />
 
         <uses-library
             android:name="com.google.android.maps"

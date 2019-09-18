@@ -7,9 +7,9 @@ INJECTED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManif
 	android:name
 		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:89:13-50
 manifest
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:2:1-594:12
-INJECTED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:2:1-594:12
-INJECTED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:2:1-594:12
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:2:1-598:12
+INJECTED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:2:1-598:12
+INJECTED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:2:1-598:12
 MERGED from [com.squareup.leakcanary:leakcanary-support-fragment:1.6.3] C:\Users\EDZ\.gradle\wrapper\dists\gradle-4.10-bin\caches\transforms-1\files-1.1\jetified-leakcanary-support-fragment-1.6.3.aar\e1b842c946f4bb473ad28828aee7a810\AndroidManifest.xml:17:1-25:12
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\EDZ\.gradle\wrapper\dists\gradle-4.10-bin\caches\transforms-1\files-1.1\jetified-leakcanary-android-1.6.3.aar\c629bb3cd4b978e0be55217c4abaa642\AndroidManifest.xml:17:1-74:12
 MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\EDZ\.gradle\wrapper\dists\gradle-4.10-bin\caches\transforms-1\files-1.1\multidex-2.0.1.aar\4ad7443460918388854578e756546e3b\AndroidManifest.xml:17:1-22:12
@@ -81,19 +81,19 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\EDZ\.gradle\wrap
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\EDZ\.gradle\wrapper\dists\gradle-4.10-bin\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\ad6461e5c8094880854e4cd19ae038ba\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\EDZ\.gradle\wrapper\dists\gradle-4.10-bin\caches\transforms-1\files-1.1\print-1.0.0.aar\9aae7d61c97db117cff44f98bee0d711\AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\EDZ\.gradle\wrapper\dists\gradle-4.10-bin\caches\transforms-1\files-1.1\jetified-gifdecoder-4.9.0.aar\a37c991d71169551ec5a6c3c9c7be5ba\AndroidManifest.xml:2:1-11:12
-INJECTED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:2:1-594:12
-INJECTED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:2:1-594:12
+INJECTED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:2:1-598:12
+INJECTED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:2:1-598:12
 	package
 		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:2:11-41
 	android:versionName
 		INJECTED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:2:1-594:12
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:2:1-598:12
 		INJECTED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml
 	xmlns:tools
 		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:4:11-57
 	android:versionCode
 		INJECTED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:2:1-594:12
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:2:1-598:12
 		INJECTED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:3:11-69
@@ -468,7 +468,7 @@ ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest
 	android:name
 		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:77:22-83
 application
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:79:5-592:19
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:79:5-596:19
 MERGED from [com.squareup.leakcanary:leakcanary-support-fragment:1.6.3] C:\Users\EDZ\.gradle\wrapper\dists\gradle-4.10-bin\caches\transforms-1\files-1.1\jetified-leakcanary-support-fragment-1.6.3.aar\e1b842c946f4bb473ad28828aee7a810\AndroidManifest.xml:22:5-23:19
 MERGED from [com.squareup.leakcanary:leakcanary-support-fragment:1.6.3] C:\Users\EDZ\.gradle\wrapper\dists\gradle-4.10-bin\caches\transforms-1\files-1.1\jetified-leakcanary-support-fragment-1.6.3.aar\e1b842c946f4bb473ad28828aee7a810\AndroidManifest.xml:22:5-23:19
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\EDZ\.gradle\wrapper\dists\gradle-4.10-bin\caches\transforms-1\files-1.1\jetified-leakcanary-android-1.6.3.aar\c629bb3cd4b978e0be55217c4abaa642\AndroidManifest.xml:28:5-72:19
@@ -558,805 +558,805 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\EDZ\.gradle\wr
 	android:name
 		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:80:9-39
 meta-data#com.netease.nim.appKey
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:92:9-94:54
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:96:9-98:54
 	android:value
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:94:4-52
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:98:4-52
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:93:13-50
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:97:13-50
 uses-library#com.google.android.maps
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:96:9-98:39
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:100:9-102:39
 	android:required
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:98:13-37
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:102:13-37
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:97:13-51
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:101:13-51
 meta-data#JRMF_PARTNER_NAME
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:101:9-103:35
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:105:9-107:35
 	android:value
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:103:13-33
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:107:13-33
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:102:13-45
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:106:13-45
 meta-data#android.max_aspect
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:106:9-108:34
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:110:9-112:34
 	android:value
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:108:13-32
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:112:13-32
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:107:13-46
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:111:13-46
 activity#com.netease.nim.demo.main.activity.WelcomeActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:111:9-126:20
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:115:9-130:20
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:117:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:121:13-49
 	android:label
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:115:13-45
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:119:13-45
 	android:launchMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:116:13-43
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:120:13-43
 	android:hardwareAccelerated
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:114:13-47
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:118:13-47
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:119:13-52
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:123:13-52
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:113:13-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:117:13-63
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:118:13-65
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:122:13-65
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:112:13-58
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:116:13-58
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER+category:name:android.intent.category.MULTIWINDOW_LAUNCHER
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:120:13-125:29
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:124:13-129:29
 action#android.intent.action.MAIN
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:121:17-68
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:125:17-68
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:121:25-66
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:125:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:123:17-76
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:127:17-76
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:123:27-74
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:127:27-74
 category#android.intent.category.MULTIWINDOW_LAUNCHER
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:124:17-88
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:128:17-88
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:124:27-86
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:128:27-86
 activity#com.netease.nim.demo.main.activity.MainActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:129:9-136:54
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:133:9-140:54
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:134:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:138:13-49
 	android:launchMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:133:13-43
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:137:13-43
 	android:hardwareAccelerated
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:132:13-47
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:136:13-47
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:136:13-52
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:140:13-52
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:131:13-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:135:13-63
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:135:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:139:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:130:13-55
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:134:13-55
 activity#com.netease.nim.demo.main.activity.MultiportActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:139:9-144:69
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:143:9-148:69
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:142:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:146:13-49
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:144:13-67
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:148:13-67
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:141:13-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:145:13-63
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:143:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:147:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:140:13-60
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:144:13-60
 activity#com.netease.nim.demo.login.LoginActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:147:9-153:69
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:151:9-157:69
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:151:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:155:13-49
 	android:label
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:150:13-42
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:154:13-42
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:153:13-67
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:157:13-67
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:149:13-48
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:153:13-48
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:152:13-46
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:156:13-46
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:148:13-48
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:152:13-48
 activity#com.netease.nim.demo.main.activity.AboutActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:156:9-162:74
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:160:9-166:74
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:160:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:164:13-49
 	android:label
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:159:13-42
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:163:13-42
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:162:13-72
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:166:13-72
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:158:13-48
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:162:13-48
 	android:theme
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:165:13-56
+	android:name
 		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:161:13-56
-	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:157:13-56
 activity#com.netease.nim.demo.main.activity.SettingsActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:164:9-169:62
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:168:9-173:62
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:167:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:171:13-49
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:169:13-60
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:173:13-60
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:166:13-48
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:170:13-48
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:168:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:172:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:165:13-59
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:169:13-59
 activity#com.netease.nim.demo.main.activity.NoDisturbActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:171:9-176:74
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:175:9-180:74
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:174:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:178:13-49
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:176:13-72
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:180:13-72
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:173:13-48
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:177:13-48
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:175:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:179:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:172:13-60
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:176:13-60
 activity#com.netease.nim.demo.contact.activity.AddFriendActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:178:9-183:74
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:182:9-187:74
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:181:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:185:13-49
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:183:13-72
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:187:13-72
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:180:13-48
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:184:13-48
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:182:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:186:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:179:13-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:183:13-63
 activity#com.netease.nim.demo.contact.activity.UserProfileActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:185:9-190:74
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:189:9-194:74
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:188:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:192:13-49
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:190:13-72
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:194:13-72
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:187:13-48
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:191:13-48
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:189:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:193:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:186:13-65
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:190:13-65
 activity#com.netease.nim.demo.contact.activity.UserProfileSettingActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:192:9-197:74
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:196:9-201:74
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:195:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:199:13-49
 	android:windowSoftInputMode
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:201:13-72
+	android:configChanges
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:198:13-48
+	android:theme
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:200:13-56
+	android:name
 		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:197:13-72
-	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:194:13-48
-	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:196:13-56
-	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:193:13-72
 activity#com.netease.nim.demo.contact.activity.UserProfileEditItemActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:199:9-204:74
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:203:9-208:74
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:202:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:206:13-49
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:204:13-72
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:208:13-72
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:201:13-48
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:205:13-48
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:203:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:207:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:200:13-73
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:204:13-73
 activity#com.netease.nim.demo.contact.activity.BlackListActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:206:9-211:74
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:210:9-215:74
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:209:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:213:13-49
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:211:13-72
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:215:13-72
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:208:13-48
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:212:13-48
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:210:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:214:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:207:13-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:211:13-63
 activity#com.netease.nim.demo.file.browser.FileBrowserActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:214:9-220:74
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:218:9-224:74
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:218:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:222:13-49
 	android:label
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:217:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:221:13-49
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:220:13-72
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:224:13-72
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:216:13-48
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:220:13-48
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:219:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:223:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:215:13-61
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:219:13-61
 activity#com.netease.nim.demo.main.activity.SystemMessageActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:222:9-227:69
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:226:9-231:69
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:225:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:229:13-49
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:227:13-67
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:231:13-67
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:224:13-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:228:13-63
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:226:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:230:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:223:13-64
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:227:13-64
 activity#com.netease.nim.demo.main.activity.CustomNotificationActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:228:9-233:69
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:232:9-237:69
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:231:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:235:13-49
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:233:13-67
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:237:13-67
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:230:13-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:234:13-63
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:232:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:236:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:229:13-69
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:233:13-69
 activity#com.netease.nim.demo.main.activity.AvchatListActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:234:9-239:56
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:238:9-243:56
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:237:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:241:13-49
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:239:13-54
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:243:13-54
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:236:13-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:240:13-63
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:238:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:242:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:235:13-61
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:239:13-61
 activity#com.netease.nim.demo.session.activity.MessageHistoryActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:240:9-245:69
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:244:9-249:69
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:243:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:247:13-49
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:245:13-67
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:249:13-67
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:242:13-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:246:13-63
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:244:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:248:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:241:13-68
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:245:13-68
 activity#com.netease.nim.demo.session.activity.MessageInfoActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:246:9-251:69
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:250:9-255:69
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:249:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:253:13-49
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:251:13-67
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:255:13-67
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:248:13-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:252:13-63
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:250:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:254:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:247:13-65
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:251:13-65
 activity#com.netease.nim.demo.team.activity.AdvancedTeamSearchActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:253:9-258:69
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:257:9-262:69
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:256:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:260:13-49
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:258:13-67
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:262:13-67
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:255:13-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:259:13-63
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:257:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:261:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:254:13-69
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:258:13-69
 activity#com.netease.nim.demo.team.activity.AdvancedTeamJoinActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:260:9-265:69
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:264:9-269:69
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:263:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:267:13-49
 	android:windowSoftInputMode
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:269:13-67
+	android:configChanges
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:266:13-63
+	android:theme
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:268:13-56
+	android:name
 		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:265:13-67
-	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:262:13-63
-	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:264:13-56
-	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:261:13-67
 activity#com.netease.nim.demo.main.activity.TeamListActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:267:9-272:66
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:271:9-276:66
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:270:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:274:13-49
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:272:13-64
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:276:13-64
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:269:13-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:273:13-63
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:271:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:275:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:268:13-59
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:272:13-59
 activity#com.netease.nim.demo.main.activity.GlobalSearchActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:275:9-280:61
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:279:9-284:61
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:278:13-47
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:282:13-47
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:280:13-59
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:284:13-59
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:277:13-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:281:13-63
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:279:13-52
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:283:13-52
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:276:13-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:280:13-63
 activity#com.netease.nim.demo.main.activity.GlobalSearchDetailActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:282:9-286:58
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:286:9-290:58
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:285:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:289:13-49
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:284:13-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:288:13-63
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:286:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:290:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:283:13-69
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:287:13-69
 activity#com.netease.nim.demo.main.activity.GlobalSearchDetailActivity2
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:288:9-292:58
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:292:9-296:58
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:291:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:295:13-49
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:290:13-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:294:13-63
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:292:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:296:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:289:13-70
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:293:13-70
 activity#com.netease.nim.demo.session.activity.WatchSnapChatPictureActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:295:9-298:58
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:299:9-302:58
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:297:13-51
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:301:13-51
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:298:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:302:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:296:13-74
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:300:13-74
 activity#com.netease.nim.demo.session.activity.FileDownloadActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:301:9-304:58
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:305:9-308:58
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:303:13-51
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:307:13-51
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:304:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:308:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:302:13-66
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:306:13-66
 activity#com.netease.nim.demo.location.activity.LocationAmapActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:307:9-312:58
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:311:9-316:58
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:311:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:315:13-49
 	android:label
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:310:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:314:13-49
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:309:13-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:313:13-63
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:312:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:316:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:308:13-67
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:312:13-67
 activity#com.netease.nim.demo.location.activity.NavigationAmapActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:313:9-318:58
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:317:9-322:58
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:317:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:321:13-49
 	android:label
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:316:13-54
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:320:13-54
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:315:13-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:319:13-63
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:318:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:322:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:314:13-69
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:318:13-69
 activity#com.netease.nim.demo.session.search.SearchMessageActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:321:9-326:71
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:325:9-330:71
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:324:13-47
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:328:13-47
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:326:13-69
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:330:13-69
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:323:13-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:327:13-63
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:325:13-52
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:329:13-52
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:322:13-65
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:326:13-65
 activity#com.netease.nim.demo.session.search.DisplayMessageActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:328:9-333:69
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:332:9-337:69
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:331:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:335:13-49
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:333:13-67
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:337:13-67
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:330:13-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:334:13-63
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:332:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:336:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:329:13-66
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:333:13-66
 activity#com.netease.nim.demo.chatroom.activity.ChatRoomActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:336:9-340:69
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:340:9-344:69
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:338:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:342:13-49
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:340:13-67
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:344:13-67
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:339:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:343:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:337:13-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:341:13-63
 activity#com.netease.nim.demo.chatroom.activity.ChatRoomIndependentActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:342:9-346:69
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:346:9-350:69
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:344:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:348:13-49
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:346:13-67
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:350:13-67
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:345:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:349:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:343:13-74
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:347:13-74
 activity#com.netease.nim.demo.jsbridge.JsBridgeActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:348:9-353:74
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:352:9-357:74
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:351:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:355:13-49
 	android:label
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:350:13-46
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:354:13-46
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:353:13-72
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:357:13-72
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:352:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:356:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:349:13-54
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:353:13-54
 activity#com.netease.nim.demo.main.activity.RobotListActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:356:9-359:58
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:360:9-363:58
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:358:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:362:13-49
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:359:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:363:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:357:13-60
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:361:13-60
 activity#com.netease.nim.demo.session.activity.SendAckMsgActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:362:9-365:58
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:366:9-369:58
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:364:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:368:13-49
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:365:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:369:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:363:13-64
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:367:13-64
 activity#com.netease.nim.demo.session.activity.AckMsgInfoActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:368:9-371:58
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:372:9-375:58
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:370:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:374:13-49
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:371:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:375:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:369:13-64
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:373:13-64
 activity#com.netease.nim.demo.contact.activity.RobotProfileActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:373:9-376:58
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:377:9-380:58
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:375:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:379:13-49
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:376:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:380:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:374:13-66
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:378:13-66
 activity#com.netease.nim.demo.main.activity.PrivatizationConfigActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:379:9-385:74
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:383:9-389:74
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:383:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:387:13-49
 	android:label
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:382:13-57
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:386:13-57
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:385:13-72
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:389:13-72
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:381:13-48
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:385:13-48
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:384:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:388:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:380:13-70
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:384:13-70
 activity#com.netease.nim.demo.main.activity.MsgMigrationActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:386:9-392:74
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:390:9-396:74
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:390:13-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:394:13-49
 	android:label
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:389:13-55
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:393:13-55
 	android:windowSoftInputMode
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:392:13-72
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:396:13-72
 	android:configChanges
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:388:13-48
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:392:13-48
 	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:391:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:395:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:387:13-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:391:13-63
 service#com.netease.nimlib.service.NimService
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:396:9-398:38
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:400:9-402:38
 	android:process
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:398:13-36
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:402:13-36
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:397:13-65
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:401:13-65
 service#com.netease.nimlib.service.NimService$Aux
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:401:9-403:38
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:405:9-407:38
 	android:process
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:403:13-36
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:407:13-36
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:402:13-69
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:406:13-69
 service#com.netease.nimlib.job.NIMJobService
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:406:9-410:38
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:410:9-414:38
 	android:process
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:410:13-36
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:414:13-36
 	android:exported
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:408:13-36
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:412:13-36
 	android:permission
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:409:13-69
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:413:13-69
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:407:13-64
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:411:13-64
 receiver#com.netease.nimlib.service.NimReceiver
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:413:9-421:20
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:417:9-425:20
 	android:process
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:416:13-36
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:420:13-36
 	android:exported
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:415:13-37
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:419:13-37
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:414:13-66
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:418:13-66
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.net.conn.CONNECTIVITY_CHANGE
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:417:13-420:29
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:421:13-424:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:418:17-78
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:422:17-78
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:418:25-76
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:422:25-76
 action#android.net.conn.CONNECTIVITY_CHANGE
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:419:17-78
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:423:17-78
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:419:25-76
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:423:25-76
 receiver#com.netease.nimlib.service.ResponseReceiver
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:424:9-79
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:428:9-79
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:424:19-77
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:428:19-77
 service#com.netease.nimlib.service.ResponseService
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:427:9-77
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:431:9-77
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:427:18-75
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:431:18-75
 provider#com.netease.nimlib.ipc.NIMContentProvider
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:431:9-435:38
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:435:9-439:38
 	android:process
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:435:13-36
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:439:13-36
 	android:authorities
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:433:13-68
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:437:13-68
 	android:exported
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:434:13-37
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:438:13-37
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:432:13-69
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:436:13-69
 service#com.xiaomi.push.service.XMJobService
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:438:9-443:41
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:442:9-447:41
 	android:process
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:443:13-39
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:447:13-39
 	android:enabled
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:440:13-35
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:444:13-35
 	android:exported
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:441:13-37
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:445:13-37
 	android:permission
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:442:13-69
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:446:13-69
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:439:13-64
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:443:13-64
 service#com.xiaomi.push.service.XMPushService
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:445:9-448:41
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:449:9-452:41
 	android:process
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:448:13-39
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:452:13-39
 	android:enabled
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:447:13-35
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:451:13-35
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:446:13-65
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:450:13-65
 receiver#com.xiaomi.push.service.receivers.PingReceiver
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:450:9-457:20
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:454:9-461:20
 	android:process
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:453:13-39
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:457:13-39
 	android:exported
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:452:13-37
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:456:13-37
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:451:13-74
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:455:13-74
 intent-filter#action:name:com.xiaomi.push.PING_TIMER
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:454:13-456:29
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:458:13-460:29
 action#com.xiaomi.push.PING_TIMER
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:455:17-68
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:459:17-68
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:455:25-66
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:459:25-66
 receiver#com.xiaomi.push.service.receivers.NetworkStatusReceiver
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:459:9-466:20
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:463:9-470:20
 	android:exported
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:461:13-36
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:465:13-36
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:460:13-83
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:464:13-83
 intent-filter#action:name:android.net.conn.CONNECTIVITY_CHANGE+category:name:android.intent.category.DEFAULT
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:462:13-465:29
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:466:13-469:29
 category#android.intent.category.DEFAULT
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:464:17-75
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:468:17-75
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:464:27-73
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:468:27-73
 service#com.xiaomi.mipush.sdk.PushMessageHandler
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:468:9-471:38
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:472:9-475:38
 	android:enabled
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:470:13-35
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:474:13-35
 	android:exported
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:471:13-36
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:475:13-36
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:469:13-68
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:473:13-68
 service#com.xiaomi.mipush.sdk.MessageHandleService
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:473:9-475:37
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:477:9-479:37
 	android:enabled
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:475:13-35
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:479:13-35
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:474:13-70
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:478:13-70
 receiver#com.netease.nimlib.mixpush.mi.MiPushReceiver
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:477:9-485:20
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:481:9-489:20
 	android:exported
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:479:13-36
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:483:13-36
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:478:13-72
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:482:13-72
 intent-filter#action:name:com.xiaomi.mipush.ERROR+action:name:com.xiaomi.mipush.MESSAGE_ARRIVED+action:name:com.xiaomi.mipush.RECEIVE_MESSAGE
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:480:13-484:29
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:484:13-488:29
 	android:priority
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:480:28-57
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:484:28-57
 action#com.xiaomi.mipush.RECEIVE_MESSAGE
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:481:17-75
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:485:17-75
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:481:25-73
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:485:25-73
 action#com.xiaomi.mipush.MESSAGE_ARRIVED
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:482:17-75
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:486:17-75
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:482:25-73
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:486:25-73
 action#com.xiaomi.mipush.ERROR
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:483:17-65
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:487:17-65
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:483:25-63
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:487:25-63
 meta-data#com.huawei.hms.client.appid
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:489:9-491:40
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:493:9-495:40
 	android:value
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:491:13-38
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:495:13-38
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:490:13-55
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:494:13-55
 provider#com.huawei.hms.update.provider.UpdateProvider
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:493:9-497:49
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:497:9-501:49
 	android:grantUriPermissions
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:497:13-47
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:501:13-47
 	android:authorities
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:495:13-75
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:499:13-75
 	android:exported
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:496:13-37
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:500:13-37
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:494:13-73
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:498:13-73
 receiver#com.netease.nimlib.mixpush.hw.HWPushReceiver
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:500:9-514:20
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:504:9-518:20
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:500:19-78
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:504:19-78
 intent-filter#action:name:com.huawei.android.push.intent.CLICK+action:name:com.huawei.android.push.intent.RECEIVE+action:name:com.huawei.android.push.intent.REGISTRATION+action:name:com.huawei.intent.action.PUSH_STATE
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:501:13-510:29
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:505:13-514:29
 	android:priority
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:501:28-57
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:505:28-57
 action#com.huawei.android.push.intent.REGISTRATION
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:503:17-85
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:507:17-85
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:503:25-83
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:507:25-83
 action#com.huawei.android.push.intent.RECEIVE
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:505:17-80
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:509:17-80
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:505:25-78
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:509:25-78
 action#com.huawei.android.push.intent.CLICK
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:507:17-78
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:511:17-78
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:507:25-76
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:511:25-76
 action#com.huawei.intent.action.PUSH_STATE
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:509:17-77
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:513:17-77
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:509:25-75
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:513:25-75
 meta-data#CS_cloud_ablitity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:511:13-513:55
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:515:13-517:55
 	android:value
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:513:17-53
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:517:17-53
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:512:17-49
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:516:17-49
 receiver#com.huawei.hms.support.api.push.PushEventReceiver
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:516:9-521:20
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:520:9-525:20
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:516:19-83
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:520:19-83
 intent-filter#action:name:com.huawei.intent.action.PUSH
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:517:13-520:29
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:521:13-524:29
 action#com.huawei.intent.action.PUSH
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:519:17-71
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:523:17-71
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:519:25-69
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:523:25-69
 service#com.amap.api.location.APSService
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:524:9-67
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:528:9-67
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:524:18-65
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:528:18-65
 service#com.netease.nimlib.mixpush.fcm.FCMTokenService
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:527:9-533:19
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:531:9-537:19
 	android:exported
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:529:13-37
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:533:13-37
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:528:13-74
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:532:13-74
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:530:13-532:29
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:534:13-536:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:531:17-78
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:535:17-78
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:531:25-75
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:535:25-75
 meta-data#com.google.firebase.messaging.default_notification_icon
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:536:9-538:62
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:540:9-542:62
 	android:resource
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:538:13-60
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:542:13-60
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:537:13-83
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:541:13-83
 meta-data#com.google.firebase.messaging.default_notification_color
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:539:9-541:58
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:543:9-545:58
 	android:resource
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:541:13-56
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:545:13-56
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:540:13-84
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:544:13-84
 receiver#com.netease.nimlib.mixpush.mz.MZPushReceiver
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:544:9-558:20
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:548:9-562:20
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:544:19-78
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:548:19-78
 intent-filter#action:name:com.meizu.c2dm.intent.RECEIVE+action:name:com.meizu.c2dm.intent.REGISTRATION+action:name:com.meizu.flyme.push.intent.MESSAGE+action:name:com.meizu.flyme.push.intent.REGISTER.FEEDBACK+action:name:com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK+category:name:com.netease.nim.demo
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:545:13-557:29
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:549:13-561:29
 	android:priority
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:545:28-57
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:549:28-57
 action#com.meizu.flyme.push.intent.MESSAGE
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:547:17-77
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:551:17-77
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:547:25-75
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:551:25-75
 action#com.meizu.flyme.push.intent.REGISTER.FEEDBACK
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:549:17-87
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:553:17-87
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:549:25-85
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:553:25-85
 action#com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:551:17-89
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:555:17-89
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:551:25-87
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:555:25-87
 action#com.meizu.c2dm.intent.REGISTRATION
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:553:17-76
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:557:17-76
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:553:25-74
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:557:25-74
 action#com.meizu.c2dm.intent.RECEIVE
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:554:17-71
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:558:17-71
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:554:25-69
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:558:25-69
 category#com.netease.nim.demo
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:556:17-64
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:560:17-64
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:556:27-62
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:560:27-62
 service#com.vivo.push.sdk.service.CommandClientService
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:561:9-563:38
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:565:9-567:38
 	android:exported
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:563:13-36
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:567:13-36
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:562:13-74
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:566:13-74
 activity#com.vivo.push.sdk.LinkProxyClientActivity
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:564:9-568:74
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:568:9-572:74
 	android:screenOrientation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:567:13-49
-	android:exported
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:566:13-37
-	android:theme
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:568:13-72
-	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:565:13-69
-meta-data#com.vivo.push.api_key
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:570:9-572:67
-	android:value
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:572:13-65
-	android:name
 		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:571:13-49
-meta-data#com.vivo.push.app_id
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:573:9-575:36
+	android:exported
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:570:13-37
+	android:theme
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:572:13-72
+	android:name
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:569:13-69
+meta-data#com.vivo.push.api_key
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:574:9-576:67
 	android:value
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:575:13-34
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:576:13-65
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:574:13-48
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:575:13-49
+meta-data#com.vivo.push.app_id
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:577:9-579:36
+	android:value
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:579:13-34
+	android:name
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:578:13-48
 receiver#com.netease.nimlib.mixpush.vivo.VivoPushReceiver
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:577:9-582:20
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:581:9-586:20
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:577:19-82
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:581:19-82
 intent-filter#action:name:com.vivo.pushclient.action.RECEIVE
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:578:13-581:29
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:582:13-585:29
 action#com.vivo.pushclient.action.RECEIVE
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:580:17-76
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:584:17-76
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:580:25-74
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:584:25-74
 service#com.netease.nimlib.mixpush.oppo.OppoPushService
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:585:9-591:19
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:589:9-595:19
 	android:permission
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:587:13-77
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:591:13-77
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:586:13-75
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:590:13-75
 intent-filter#action:name:com.coloros.mcs.action.RECEIVE_MCS_MESSAGE
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:588:13-590:29
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:592:13-594:29
 action#com.coloros.mcs.action.RECEIVE_MCS_MESSAGE
-ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:589:17-84
+ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:593:17-84
 	android:name
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:589:25-82
+		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:593:25-82
 service#com.squareup.leakcanary.internal.HeapAnalyzerService
 ADDED from [com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\EDZ\.gradle\wrapper\dists\gradle-4.10-bin\caches\transforms-1\files-1.1\jetified-leakcanary-android-1.6.3.aar\c629bb3cd4b978e0be55217c4abaa642\AndroidManifest.xml:29:9-32:45
 	android:process
