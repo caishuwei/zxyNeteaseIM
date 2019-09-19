@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.fastjson.JSON;
 import com.netease.nim.avchatkit.activity.AVChatActivity;
 import com.netease.nim.avchatkit.constant.AVChatExtras;
@@ -33,6 +34,7 @@ import java.util.Map;
  * <p/>
  * Created by huangjun on 2015/2/1.
  */
+@Route(path = "/zxy/welcom")
 public class WelcomeActivity extends UI {
 
     private static final String TAG = "WelcomeActivity";
