@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.1"
+
+
+    defaultConfig {
+        applicationId "com.zxy.main"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility rootProject.ext.appSourceCompatibility
+        targetCompatibility rootProject.ext.appTargetCompatibility
+    }
+}
+
+dependencies {
+    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation fileTree(include: '*.jar', dir: 'libs')
+
+
+    implementation project(path: ':uikit')
+    implementation project(':jrmfRpWalletlib')
+    implementation project(':avchatkit')
+    implementation project(path: ':rtskit')
+    //debugImplementation project(':plugins:sf')
+
+    implementation 'com.meizu.flyme.internet:push-internal:3.6.3@aar'
+    implementation 'com.huawei.android.hms:push:2.6.0.301'
+
+    implementation 'com.netease.nimlib:jsbridge:1.3.1'
+
+    implementation 'com.google.android.gms:play-services-base:17.0.0'
+    implementation 'com.google.firebase:firebase-messaging:19.0.1'
+    implementation 'com.google.firebase:firebase-core:17.2.0'
+    //implementation 'com.crashlytics.sdk.android:crashlytics:2.9.9'
+
+    // ViewModel and LiveData
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    // Java8 support for Lifecycles
+    implementation 'androidx.lifecycle:lifecycle-common-java8:2.1.0'
+
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.3'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+
+    implementation project(path: ':zxy')
+}
