@@ -5,13 +5,15 @@
 
 Gradle
 -----
-Step 1
-	 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
+Step 1    
+	
+
+     allprojects {  
+		repositories {    
+			...    
+			maven { url 'https://jitpack.io' }     
+		}    
+	}    
 
 Step 2. Add the dependency
 
@@ -26,3 +28,13 @@ Step 2. Add the dependency
 
  
 #略  哈哈
+
+            
+
+
+
+
+
+
+
+
