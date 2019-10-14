@@ -1,2 +1,2 @@
-# Referenced at D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:12
+# Referenced at D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:11
 -keep class androidx.multidex.MultiDexApplication { <init>(...); }

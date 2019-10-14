@@ -44,8 +44,6 @@ INJECTED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManif
 		INJECTED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:2:11-69
-	android:installLocation
-		ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:5:5-35
 application
 ADDED from D:\Develop\Android\workspacesModule\zxyNeteaseIM\demo\AndroidManifest.xml:7:5-24:19
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] C:\Users\EDZ\.gradle\wrapper\dists\gradle-4.10-bin\caches\transforms-1\files-1.1\lifecycle-extensions-2.1.0.aar\5a265f53aaf86d5d2b0e86a1e161ba93\AndroidManifest.xml:22:5-23:19
