@@ -430,7 +430,7 @@
         <!-- 云信进程间通信provider -->
         <!-- android:authorities="{包名}.ipc.provider", 请将com.netease.nim.demo替换为自己的包名 -->
         <provider
-            android:name="com.netease.nim.provider.MyIMUpdateProvider"
+            android:name="com.netease.nim.provider.IMUpdateProvider"
             android:authorities="com.netease.nim.demo.ipc.provider"
             android:exported="false"
             android:process=":core"/>
@@ -492,7 +492,7 @@
             android:value="100006871"/>
 
         <provider
-            android:name="com.netease.nim.provider.MyIMUpdateProvider"
+            android:name="com.netease.nim.provider.IMUpdateProvider"
             android:authorities="com.netease.nim.demo.hms.update.provider"
             android:exported="false"
             android:grantUriPermissions="true"/>
