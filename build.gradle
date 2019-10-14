@@ -28,7 +28,6 @@ ext {
     appSourceCompatibility = 1.8
     appTargetCompatibility = 1.8
     nimOutputDir = "nim-outputs-${versionName}-${getBuildTime()}-${getGitVersion()}"
-
 }
 
 static def getGitVersion() {

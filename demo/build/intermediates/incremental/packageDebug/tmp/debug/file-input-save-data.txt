@@ -1,11 +1,11 @@
 #Internal package file, do not edit.
-#Mon Oct 14 13:05:28 CST 2019
+#Mon Oct 14 14:30:15 CST 2019
 1.base=D\:\\Develop\\Android\\workspacesModule\\zxyNeteaseIM\\demo\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 0.baseType=DIRECTORY
 1.baseType=DIRECTORY
 count=2
 1.set=DEX
-0.path=classes.dex
+0.path=classes2.dex
 0.set=DEX
-0.base=D\:\\Develop\\Android\\workspacesModule\\zxyNeteaseIM\\demo\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+0.base=D\:\\Develop\\Android\\workspacesModule\\zxyNeteaseIM\\demo\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 1.path=classes.dex

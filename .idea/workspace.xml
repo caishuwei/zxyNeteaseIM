@@ -112,11 +112,18 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/demo/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/build/generated/source/buildConfig/debug/com/netease/nim/demo/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/build/generated/source/buildConfig/debug/com/netease/nim/demo/BuildConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/build/intermediates/incremental/mergeDebugResources/merged.dir/values-b+jv+Latn/values-b+jv+Latn.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/build/intermediates/incremental/mergeDebugResources/merged.dir/values-bo-rCN/values-bo-rCN.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mai/values-mai.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mi/values-mi.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/build/intermediates/incremental/mergeDebugResources/merged.dir/values-my-rMM/values-my-rMM.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/build/intermediates/incremental/mergeDebugResources/merged.dir/values-my-rZG/values-my-rZG.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zz-rZX/values-zz-rZX.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/zxy_demo/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zxy_demo/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zxy_demo/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/zxy_demo/build.gradle" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -138,69 +145,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zxy_demo/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="120" column="36" selection-start-line="120" selection-start-column="32" selection-end-line="120" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/src/com/netease/nim/demo/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/demo/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-              <folding>
-                <element signature="e#316#334#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-          <provider editor-type-id="android-manifest" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zxy_demo/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="521" column="63" selection-start-line="521" selection-start-column="63" selection-end-line="521" selection-end-column="63" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-manifest" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10-bin/caches/modules-2/files-2.1/com.huawei.android.hms/base/2.6.0.301/f754553d52c21ea9d0a44dc49eacef3cfb931720/base-2.6.0.301-sources.jar!/com/huawei/hms/update/provider/UpdateProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10-bin/caches/transforms-1/files-1.1/base-2.6.0.301.aar/e4ae83b5cfb53d0ebe9ff839670b048f/jars/classes.jar!/com/huawei/hms/update/provider/UpdateProvider.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="38" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="38" />
+            <state relative-caret-position="409">
+              <caret line="82" column="34" lean-forward="true" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
               <folding>
-                <element signature="e#0#4561#0" expanded="true" />
+                <element signature="e#15939#15969#0" expanded="true" />
               </folding>
             </state>
           </provider>
+          <provider editor-type-id="android-manifest" />
         </entry>
       </file>
     </leaf>
@@ -240,9 +195,10 @@
       <find>ResponseService</find>
       <find>com.netease.nim.demo</find>
       <find>com.netease.nim</find>
-      <find>provider</find>
       <find>com.huawe</find>
       <find>com.huawei.android.hms</find>
+      <find>provider</find>
+      <find>full_frame</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\EDZ\Desktop\网易云信\nim_demo</dir>
@@ -273,9 +229,10 @@
         <option value="$PROJECT_DIR$/zxy_demo/src/com/netease/nim/provider/IMUpdateProvider.kt" />
         <option value="$PROJECT_DIR$/zxy_demo/src/com/netease/nim/provider/IMNIMContentProvider.kt" />
         <option value="$PROJECT_DIR$/demo/build.gradle" />
-        <option value="$PROJECT_DIR$/zxy_demo/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/zxy_demo/build.gradle" />
         <option value="$PROJECT_DIR$/demo/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/zxy_demo/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -293,6 +250,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -353,14 +312,14 @@
             </path>
             <path>
               <item name="zxyNeteaseIM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="zxyNeteaseIM" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="zxy_demo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -481,7 +440,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24413647" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24413647" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
@@ -497,7 +456,7 @@
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Flutter Performance" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info active="true" anchor="bottom" id="Build" order="7" visible="true" weight="0.23644252" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.23644252" />
       <window_info anchor="bottom" id="Find" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Android Profiler" order="10" show_stripe_button="false" weight="0.49404117" />
@@ -692,23 +651,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/demo.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/zxyNeteaseIM.iml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-71" />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gradle.properties">
       <provider selected="true" editor-type-id="text-editor">
@@ -735,22 +689,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="114" selection-start-line="114" selection-end-line="119" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zxy_demo/src/com/netease/nim/provider/IMUpdateProvider.kt" />
-    <entry file="file://$PROJECT_DIR$/zxy_demo/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="521" column="63" selection-start-line="521" selection-start-column="63" selection-end-line="521" selection-end-column="63" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10-bin/caches/modules-2/files-2.1/com.huawei.android.hms/base/2.6.0.301/f754553d52c21ea9d0a44dc49eacef3cfb931720/base-2.6.0.301-sources.jar!/com/huawei/hms/update/provider/UpdateProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -768,13 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zxy_demo/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="120" column="36" selection-start-line="120" selection-start-column="32" selection-end-line="120" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/src/com/netease/nim/demo/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -785,12 +717,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/demo/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2415">
+          <caret line="114" selection-start-line="114" selection-end-line="119" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zxy_demo/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2198">
+          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/demo/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
+        <state relative-caret-position="529">
           <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zxy_demo/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="82" column="34" lean-forward="true" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
           <folding>
-            <element signature="e#316#334#0" expanded="true" />
+            <element signature="e#15939#15969#0" expanded="true" />
           </folding>
         </state>
       </provider>

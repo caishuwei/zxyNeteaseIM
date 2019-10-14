@@ -1,7 +1,7 @@
-#Mon Oct 14 13:05:28 CST 2019
+#Mon Oct 14 14:30:15 CST 2019
 base.0=D\:\\Develop\\Android\\workspacesModule\\zxyNeteaseIM\\demo\\build\\intermediates\\transforms\\dexMerger\\debug\\0
-path.1=classes.dex
+path.1=classes2.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=D\:\\Develop\\Android\\workspacesModule\\zxyNeteaseIM\\demo\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+base.1=D\:\\Develop\\Android\\workspacesModule\\zxyNeteaseIM\\demo\\build\\intermediates\\transforms\\dexMerger\\debug\\0

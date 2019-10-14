@@ -82,7 +82,6 @@
         android:name=".NimApplication"
         android:allowBackup="true"
         android:usesCleartextTraffic="true"
-        android:icon="@drawable/ic_logo"
         android:theme="@style/AppTheme.NoActionBar">
         <uses-library
             android:name="com.google.android.maps"
@@ -518,11 +517,11 @@
                 <!--<action android:name="com.google.firebase.MESSAGING_EVENT" />-->
             <!--</intent-filter>-->
         <!--</service>-->
-        <provider
-            android:name="com.huawei.hms.update.provider.UpdateProvider"
-            android:authorities="com.classbro.student.hms.update.provider"
-            android:exported="false"
-            android:grantUriPermissions="true" />
+        <!--<provider-->
+            <!--android:name="com.huawei.hms.update.provider.UpdateProvider"-->
+            <!--android:authorities="com.classbro.student.hms.update.provider"-->
+            <!--android:exported="false"-->
+            <!--android:grantUriPermissions="true" />-->
 
         <!--&lt;!&ndash;设置收到 fcm 通知展示的图标和颜色&ndash;&gt;-->
         <!--<meta-data-->

@@ -4,23 +4,6 @@
             "outputFile": "D:\\Develop\\Android\\workspacesModule\\zxyNeteaseIM\\demo\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en\\values-en.xml",
             "map": [
                 {
-                    "source": "D:\\Develop\\Android\\workspacesModule\\zxyNeteaseIM\\uikit\\build\\intermediates\\packaged_res\\debug\\values-en\\values-en.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,105,162",
-                        "endColumns": "49,56,46",
-                        "endOffsets": "100,157,204"
-                    },
-                    "to": {
-                        "startLines": "3,4,5",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "97,147,204",
-                        "endColumns": "49,56,46",
-                        "endOffsets": "142,199,246"
-                    }
-                },
-                {
                     "source": "D:\\Develop\\Android\\workspacesModule\\zxyNeteaseIM\\demo\\res\\values-en\\strings.xml",
                     "from": {
                         "startLines": "2",
@@ -28,23 +11,6 @@
                         "startOffsets": "55",
                         "endColumns": "41",
                         "endOffsets": "92"
-                    }
-                },
-                {
-                    "source": "D:\\Develop\\Android\\workspacesModule\\zxyNeteaseIM\\zxy_demo\\build\\intermediates\\packaged_res\\debug\\values-en\\values-en.xml",
-                    "from": {
-                        "startLines": "3,4,5,6,7,8,9,10,11,12,13",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "97,190,284,366,455,541,632,736,819,903,997",
-                        "endColumns": "92,93,81,88,85,90,103,82,83,93,91",
-                        "endOffsets": "185,279,361,450,536,627,731,814,898,992,1084"
-                    },
-                    "to": {
-                        "startLines": "6,7,8,9,10,11,12,13,14,15,16",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "251,344,438,520,609,695,786,890,973,1057,1151",
-                        "endColumns": "92,93,81,88,85,90,103,82,83,93,91",
-                        "endOffsets": "339,433,515,604,690,781,885,968,1052,1146,1238"
                     }
                 }
             ]

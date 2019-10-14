@@ -13,25 +13,6 @@
                         "endColumns": "134,134,74,86,12,12,118,126,104,12,114,106,112,12",
                         "endOffsets": "185,320,395,482,1366,2262,2381,2508,2613,2837,2952,3059,3172,3402"
                     }
-                },
-                {
-                    "source": "C:\\Users\\EDZ\\.gradle\\wrapper\\dists\\gradle-4.10-bin\\caches\\transforms-1\\files-1.1\\cardview-1.0.0.aar\\b9c757730cf97febf481f5b921015e6e\\res\\values-v23\\values-v23.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "4",
-                        "endColumns": "12",
-                        "endOffsets": "200"
-                    },
-                    "to": {
-                        "startLines": "48",
-                        "startColumns": "4",
-                        "startOffsets": "3407",
-                        "endLines": "50",
-                        "endColumns": "12",
-                        "endOffsets": "3552"
-                    }
                 }
             ]
         }
