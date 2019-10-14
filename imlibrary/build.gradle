@@ -32,7 +32,8 @@ android {
         multiDexEnabled true
 
         ndk {
-            abiFilters "armeabi"
+            abiFilters "arm64-v8a","x86"
+//            abiFilters "armeabi"
 //            abiFilters "arm64-v8a", "armeabi-v7a", "x86"
         }
     }
@@ -90,13 +91,14 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:multidex:1.0.2'
+
     compile rootProject.ext.dependencies["design"]
     compile('com.afollestad.material-dialogs:core:0.9.4.5') {
         exclude group: 'com.android.support' //exclude 可以解决 lib冲突的问题。
     }
     testImplementation 'junit:junit:4.12'
-    api project(path: ':uikit')
-    api project(':avchatkit')
+    implementation project(path: ':uikit')
+    implementation project(':avchatkit')
 
     implementation 'com.google.firebase:firebase-messaging:11.6.0'
     implementation 'com.google.android.gms:play-services-base:11.6.0'
@@ -117,9 +119,9 @@ dependencies {
     }
 
     // ViewModel and LiveData
-    implementation "android.arch.lifecycle:extensions:1.1.1"
+    implementation "android.arch.lifecycle:extensions:1.1.0"
     // Java8 support for Lifecycles
-    implementation "android.arch.lifecycle:common-java8:1.1.1"
+    implementation "android.arch.lifecycle:common-java8:1.1.0"
 }
 
 //apply plugin: 'com.google.gms.google-services'
