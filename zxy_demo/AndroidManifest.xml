@@ -31,9 +31,11 @@
     <uses-permission android:name="android.permission.GET_TASKS"/>
     <uses-permission android:name="android.permission.FLASHLIGHT"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
-    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
 
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
@@ -81,17 +83,16 @@
         android:allowBackup="true"
         android:usesCleartextTraffic="true"
         android:icon="@drawable/ic_logo"
-        android:label="@string/app_name"
         android:theme="@style/AppTheme.NoActionBar">
 
         <!-- 如果IDE是Eclipse，此处可将build.gradle中的AMAP_KEY定义拷贝过来。 -->
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="${AMAP_KEY}"/>
-
+        <!--zxy appKey-demo:45c6af3c98409b18a84451215d0bdd6e-->
         <meta-data
             android:name="com.netease.nim.appKey"
-			android:value="45c6af3c98409b18a84451215d0bdd6e"/>
+			android:value="4d098526fb81dd188abec124cf61aa45"/>
 
         <uses-library
             android:name="com.google.android.maps"
@@ -429,7 +430,7 @@
         <!-- 云信进程间通信provider -->
         <!-- android:authorities="{包名}.ipc.provider", 请将com.netease.nim.demo替换为自己的包名 -->
         <provider
-            android:name="com.netease.nimlib.ipc.NIMContentProvider"
+            android:name="com.netease.nim.provider.MyIMUpdateProvider"
             android:authorities="com.netease.nim.demo.ipc.provider"
             android:exported="false"
             android:process=":core"/>
@@ -491,7 +492,7 @@
             android:value="100006871"/>
 
         <provider
-            android:name="com.huawei.hms.update.provider.UpdateProvider"
+            android:name="com.netease.nim.provider.MyIMUpdateProvider"
             android:authorities="com.netease.nim.demo.hms.update.provider"
             android:exported="false"
             android:grantUriPermissions="true"/>

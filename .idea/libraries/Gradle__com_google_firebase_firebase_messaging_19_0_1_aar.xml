@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.firebase:firebase-messaging:19.0.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10-bin/caches/transforms-1/files-1.1/jetified-firebase-messaging-19.0.1.aar/80dfda94773d22610b31f2cbfa01dc34/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10-bin/caches/transforms-1/files-1.1/jetified-firebase-messaging-19.0.1.aar/80dfda94773d22610b31f2cbfa01dc34/res" />
+      <root url="file://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10-bin/caches/transforms-1/files-1.1/jetified-firebase-messaging-19.0.1.aar/0491825ee7568e87dbd9b971fba2110a/res" />
+      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10-bin/caches/transforms-1/files-1.1/jetified-firebase-messaging-19.0.1.aar/0491825ee7568e87dbd9b971fba2110a/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10-bin/caches/modules-2/files-2.1/com.google.firebase/firebase-messaging/19.0.1/f8d4d491c1e3f58e8f4e5ca0acd2c4a5a68cd15e/firebase-messaging-19.0.1-javadoc.jar!/" />
