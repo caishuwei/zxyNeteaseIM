@@ -9,4 +9,4 @@ import com.huawei.hms.update.provider.UpdateProvider
  * *
  * ******************************************
  */
-class IMUpdateProvider:UpdateProvider()
+open class IMUpdateProvider:UpdateProvider()

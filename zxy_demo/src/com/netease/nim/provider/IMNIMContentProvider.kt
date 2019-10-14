@@ -9,6 +9,4 @@ import com.netease.nimlib.ipc.NIMContentProvider
  * *
  * ******************************************
  */
-class IMNIMContentProvider:NIMContentProvider() {
-
-}
+open class IMNIMContentProvider:NIMContentProvider()
