@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.testlib.netease">
 
     <application
@@ -9,7 +10,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar">
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:ignore="GoogleAppIndexingWarning">
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -22,7 +24,7 @@
 
         <meta-data
             android:name="com.netease.nim.appKey"
-            android:value="39b5b8380a846355afbe1d31f0b83705" />
+            android:value="4d098526fb81dd188abec124cf61aa45" />
         <!-- android:value="39b5b8380a846355afbe1d31f0b83705" 线下 -->
         <!-- android:value="1fe5406367b44a65224e9e2a48e02b80"  线上 -->
     </application>

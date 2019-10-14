@@ -2,20 +2,20 @@
 apply from: "conf.gradle"
 buildscript {
     apply from: 'script.gradle', to: buildscript
-//    repositories {
-//        jcenter()
-//        maven {
-//            url "https://jitpack.io"
-//        }
-//        maven {
-//            url 'https://maven.google.com/'
-//            name 'Google'
-//        }
-//        google()
-//    }
-//    dependencies {
-//        classpath 'com.android.tools.build:gradle:3.0.1'
-//    }
+    repositories {
+        jcenter()
+        maven {
+            url "https://jitpack.io"
+        }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.2'
+    }
 }
 
 allprojects {
