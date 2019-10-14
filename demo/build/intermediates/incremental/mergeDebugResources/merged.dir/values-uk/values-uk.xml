@@ -27,6 +27,70 @@
     <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Поділитися:"</string>
     <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"Поділитися через додаток <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Згорнути"</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Увімкнути"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"Додаток <ns1:g id="APP_NAME">%1$s</ns1:g> не працюватиме, якщо не ввімкнути сервіси Google Play."</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Увімкнути сервіси Google Play"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Установити"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"Додаток <ns1:g id="APP_NAME">%1$s</ns1:g> не працюватиме без сервісів Google Play, яких немає на вашому пристрої."</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Установити сервіси Google Play"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Доступність сервісів Google Play"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Помилка сервісів Google Play"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"У додатку <ns1:g id="APP_NAME">%1$s</ns1:g> виникла проблема із сервісами Google Play. Повторіть спробу."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"Додаток <ns1:g id="APP_NAME">%1$s</ns1:g> не працюватиме без сервісів Google Play, які не підтримуються на вашому пристрої."</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"Оновити"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"Додаток <ns1:g id="APP_NAME">%1$s</ns1:g> не працюватиме, якщо не оновити сервіси Google Play."</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Оновіть сервіси Google Play"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"Додаток <ns1:g id="APP_NAME">%1$s</ns1:g> не працюватиме без сервісів Google Play, які зараз оновлюються."</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"Потрібна нова версія сервісів Google Play. Вони невдовзі оновляться."</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"Відкрити на телефоні"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"Увійти"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"Увійти в облік. запис Google"</string>
+    <string name="connect_server_fail_prompt_toast">"Не вдається підключитися до сервера. Повторіть спробу пізніше."</string>
+    <string msgid="4133737464567140336" name="fcm_fallback_notification_channel_label">"Інше"</string>
+    <string name="getting_message_fail_prompt_toast">"Не вдалося отримати інформацію. Повторіть спробу пізніше."</string>
+    <string name="hms_abort" priority="translator">"Стоп"</string>
+    <string name="hms_abort_message" priority="translator">"Зупинити завантаження?"</string>
+    <string name="hms_bindfaildlg_message" priority="translator">"%1$s не може використовувати мобільні послуги Huawei. Будь ласка, запустіть менеджер телефону або перейдіть в налаштування, увімкніть всі дозволи для %2$s (в тому числі автоматичний запуск і вторинний запуск) і спробуйте ще раз."</string>
+    <string name="hms_cancel" priority="translator">"Скасувати"</string>
+    <string name="hms_check_failure" priority="translator">"Не вдалося перевірити наявність оновлень."</string>
+    <string name="hms_check_no_update" priority="translator">"Ви вже використовуєте найновішу версію."</string>
+    <string name="hms_checking" priority="translator">"Перевірка оновлень..."</string>
+    <string name="hms_confirm" priority="translator">"OK"</string>
+    <string name="hms_download_failure" priority="translator">"Не вдалося завантажити пакет Мобільних служб Huawei."</string>
+    <string name="hms_download_no_space" priority="translator">"Недостатньо вільного місця. Завантаження не може бути завершено."</string>
+    <string name="hms_download_retry" priority="translator">"Не вдалося завантажити. Повторити спробу?"</string>
+    <string name="hms_downloading" priority="translator">"Завантаження Мобільних служб Huawei | виконано: %d%%"</string>
+    <string name="hms_downloading_loading" priority="LT">"Завантаження"</string>
+    <string name="hms_downloading_new" priority="LT">"Завантаження HMS"</string>
+    <string name="hms_gamebox_name" priority="LT">"HUAWEI GameCenter"</string>
+    <string name="hms_install" priority="translator">"Встановити"</string>
+    <string name="hms_install_message" priority="translator">"Щоб використовувати цю функцію, потрібно встановити Мобільні служби Huawei. Встановити?"</string>
+    <string name="hms_push_channel" priority="translator">"За замовчуванням"</string>
+    <string name="hms_retry" priority="translator">"Повторити"</string>
+    <string name="hms_update" priority="translator">"Оновити"</string>
+    <string name="hms_update_message" priority="translator">"Щоб використовувати цю функцію, оновіть Мобільні служби Huawei до останньої версії. Оновити зараз?"</string>
+    <string name="hms_update_message_new" priority="LT">"Цій послузі потрібна остання версія наступної програми:\n\n%1$s"</string>
+    <string name="hms_update_title" priority="translator">"Мобільні служби Huawei"</string>
+    <string name="no_available_network_prompt_toast">"Немає підключення до Інтернету. Перевірте налаштування мережі."</string>
     <string msgid="730395136688082741" name="search_menu_title">"Пошук"</string>
     <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="third_app_dl_cancel_download_prompt_ex">"Скасувати встановлення?"</string>
+    <string name="third_app_dl_install_failed">"Встановлення не вдалося."</string>
+    <string name="third_app_dl_sure_cancel_download">"Так"</string>
+    <string name="upsdk_app_dl_installing">"Завантаження HiApp"</string>
+    <string name="upsdk_app_download_info_new">"Встановити"</string>
+    <string name="upsdk_app_size">"Розмір"</string>
+    <string name="upsdk_app_version">"Версія"</string>
+    <string name="upsdk_cancel">"Скасувати"</string>
+    <string name="upsdk_checking_update_prompt">"Перевірка оновлень…"</string>
+    <string name="upsdk_choice_update">"Доступне оновлення. Завантажте та встановіть останню версію."</string>
+    <string name="upsdk_detail">"Подробиці"</string>
+    <string name="upsdk_install">"Для оновлення встановіть HiApp. Встановити зараз?"</string>
+    <string name="upsdk_ota_app_name">"Додаток"</string>
+    <string name="upsdk_ota_cancel">"Пізніше"</string>
+    <string name="upsdk_ota_force_cancel_new">"Вихід"</string>
+    <string name="upsdk_ota_notify_updatebtn">"Оновити"</string>
+    <string name="upsdk_ota_title">"Нова версія"</string>
+    <string name="upsdk_update_check_no_new_version">"Ви вже використовуєте останню версію."</string>
+    <string name="upsdk_updating">"Оновлення"</string>
 </resources>

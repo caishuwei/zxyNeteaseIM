@@ -13,14 +13,20 @@
       <library-update>
         <group-id>androidx.recyclerview</group-id>
         <name>recyclerview</name>
-        <version>1.1.0-beta04</version>
+        <version>1.1.0-beta05</version>
+        <repository>Google</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.google.android.material</group-id>
+        <name>material</name>
+        <version>1.1.0-beta01</version>
         <repository>Google</repository>
       </library-update>
       <library-update>
         <group-id>com.github.bumptech.glide</group-id>
         <name>glide</name>
         <version>4.10.0</version>
-        <repository>Maven Central</repository>
+        <repository>JCenter,Maven Central</repository>
       </library-update>
       <library-update>
         <group-id>androidx.constraintlayout</group-id>
@@ -41,45 +47,15 @@
         <repository>Google</repository>
       </library-update>
       <library-update>
-        <group-id>com.squareup.leakcanary</group-id>
-        <name>leakcanary-android</name>
-        <version>2.0-beta-3</version>
-        <repository>Maven Central</repository>
-      </library-update>
-      <library-update>
-        <group-id>com.squareup.leakcanary</group-id>
-        <name>leakcanary-android-no-op</name>
-        <version>1.6.3</version>
-        <repository>Maven Central</repository>
-      </library-update>
-      <library-update>
         <group-id>androidx.lifecycle</group-id>
-        <name>lifecycle-extensions</name>
-        <version>2.2.0-alpha05</version>
+        <name>lifecycle-common-java8</name>
+        <version>2.2.0-beta01</version>
         <repository>Google</repository>
       </library-update>
       <library-update>
-        <group-id>com.squareup.leakcanary</group-id>
-        <name>leakcanary-support-fragment</name>
-        <version>1.6.3</version>
-        <repository>JCenter,Maven Central</repository>
-      </library-update>
-      <library-update>
-        <group-id>com.google.firebase</group-id>
-        <name>firebase-core</name>
-        <version>17.2.0</version>
-        <repository>Google</repository>
-      </library-update>
-      <library-update>
-        <group-id>com.netease.nimlib</group-id>
-        <name>jsbridge</name>
-        <version>1.3.0</version>
-        <repository>Maven Central</repository>
-      </library-update>
-      <library-update>
-        <group-id>com.google.android.gms</group-id>
-        <name>play-services-base</name>
-        <version>17.1.0</version>
+        <group-id>androidx.multidex</group-id>
+        <name>multidex</name>
+        <version>2.0.1</version>
         <repository>Google</repository>
       </library-update>
       <library-update>
@@ -89,42 +65,58 @@
         <repository>Google</repository>
       </library-update>
       <library-update>
-        <group-id>jp.wasabeef</group-id>
-        <name>glide-transformations</name>
-        <version>1.0.6</version>
-        <repository>Maven Central</repository>
-      </library-update>
-      <library-update>
         <group-id>me.leolin</group-id>
         <name>ShortcutBadger</name>
         <version>1.1.22</version>
         <repository>JCenter,Maven Central</repository>
       </library-update>
+      <library-update>
+        <group-id>com.squareup.leakcanary</group-id>
+        <name>leakcanary-android</name>
+        <version>2.0-beta-3</version>
+        <repository>Maven Central</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.meizu.flyme.internet</group-id>
+        <name>push-internal</name>
+        <version>3.3.170206</version>
+        <repository>Maven Central</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.squareup.leakcanary</group-id>
+        <name>leakcanary-android-no-op</name>
+        <version>1.6.3</version>
+        <repository>Maven Central</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.google.firebase</group-id>
+        <name>firebase-messaging</name>
+        <version>20.0.0</version>
+        <repository>Google</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.netease.nimlib</group-id>
+        <name>jsbridge</name>
+        <version>1.3.0</version>
+        <repository>Maven Central</repository>
+      </library-update>
     </library-updates>
-    <last-search-timestamp>1569485535595</last-search-timestamp>
+    <last-search-timestamp>1571031728747</last-search-timestamp>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac105f07-0088-4b3b-9e57-cf68e71251ad" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskJars.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskJars.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/demo/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/build/generated/source/buildConfig/debug/com/netease/nim/demo/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/build/generated/source/buildConfig/debug/com/netease/nim/demo/BuildConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/build/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/demo/build/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zxy_demo/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zxy_demo/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zxy_demo/src/com/netease/nim/provider/IMNIMContentProvider.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zxy_demo/src/com/netease/nim/provider/IMUpdateProvider.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zxy_demo/zxy_demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/zxy_demo/zxy_demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zxy_demo/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/zxy_demo/build.gradle" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,18 +141,64 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zxy_demo/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="125" column="50" lean-forward="true" selection-start-line="125" selection-start-column="50" selection-end-line="125" selection-end-column="50" />
+            <state relative-caret-position="297">
+              <caret line="120" column="36" selection-start-line="120" selection-start-column="32" selection-end-line="120" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/src/com/netease/nim/demo/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/zxy_demo/AndroidManifest.xml">
-          <provider editor-type-id="android-manifest" />
+        <entry file="file://$PROJECT_DIR$/demo/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="582" column="22" lean-forward="true" selection-start-line="380" selection-start-column="7" selection-end-line="582" selection-end-column="22" />
+            <state relative-caret-position="444">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="e#316#334#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-manifest" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zxy_demo/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="521" column="63" selection-start-line="521" selection-start-column="63" selection-end-line="521" selection-end-column="63" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-manifest" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10-bin/caches/modules-2/files-2.1/com.huawei.android.hms/base/2.6.0.301/f754553d52c21ea9d0a44dc49eacef3cfb931720/base-2.6.0.301-sources.jar!/com/huawei/hms/update/provider/UpdateProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10-bin/caches/transforms-1/files-1.1/base-2.6.0.301.aar/e4ae83b5cfb53d0ebe9ff839670b048f/jars/classes.jar!/com/huawei/hms/update/provider/UpdateProvider.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="5" column="38" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#4561#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -198,11 +236,13 @@
       <find>constraintlayout</find>
       <find>IMUpdateProvider</find>
       <find>com.huawei</find>
-      <find>provider</find>
       <find>ResponseReceiver</find>
       <find>ResponseService</find>
       <find>com.netease.nim.demo</find>
       <find>com.netease.nim</find>
+      <find>provider</find>
+      <find>com.huawe</find>
+      <find>com.huawei.android.hms</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\EDZ\Desktop\网易云信\nim_demo</dir>
@@ -232,10 +272,10 @@
         <option value="$PROJECT_DIR$/zxy_demo/src/com/netease/nim/provider/MyIMNIMContentProvider.kt" />
         <option value="$PROJECT_DIR$/zxy_demo/src/com/netease/nim/provider/IMUpdateProvider.kt" />
         <option value="$PROJECT_DIR$/zxy_demo/src/com/netease/nim/provider/IMNIMContentProvider.kt" />
-        <option value="$PROJECT_DIR$/demo/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/demo/build.gradle" />
-        <option value="$PROJECT_DIR$/zxy_demo/build.gradle" />
         <option value="$PROJECT_DIR$/zxy_demo/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/zxy_demo/build.gradle" />
+        <option value="$PROJECT_DIR$/demo/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -253,6 +293,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -312,51 +353,14 @@
             </path>
             <path>
               <item name="zxyNeteaseIM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zxyNeteaseIM" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="zxy_demo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zxyNeteaseIM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zxyNeteaseIM" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="zxy_demo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zxyNeteaseIM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zxyNeteaseIM" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="zxy_demo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="netease" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zxyNeteaseIM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zxyNeteaseIM" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="zxy_demo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="netease" type="462c0819:PsiDirectoryNode" />
-              <item name="nim" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zxyNeteaseIM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zxyNeteaseIM" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="zxy_demo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="netease" type="462c0819:PsiDirectoryNode" />
-              <item name="nim" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -477,7 +481,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24413647" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24413647" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
@@ -493,12 +497,11 @@
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Flutter Performance" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.23644252" />
+      <window_info active="true" anchor="bottom" id="Build" order="7" visible="true" weight="0.23644252" />
       <window_info anchor="bottom" id="Find" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Android Profiler" order="10" weight="0.49404117" />
+      <window_info anchor="bottom" id="Android Profiler" order="10" show_stripe_button="false" weight="0.49404117" />
       <window_info anchor="bottom" id="Logcat" order="11" weight="0.32936078" />
-      <window_info anchor="right" id="Word Book" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Gradle" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
@@ -508,6 +511,7 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info active="true" anchor="right" id="Preview" order="7" visible="true" weight="0.32995737" />
       <window_info anchor="right" id="Device File Explorer" order="8" side_tool="true" />
+      <window_info anchor="right" id="Word Book" order="9" side_tool="true" />
     </layout>
     <layout-to-restore>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
@@ -527,25 +531,24 @@
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Flutter Performance" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.23644252" />
+      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.23644252" />
       <window_info anchor="bottom" id="Find" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Android Profiler" order="10" weight="0.49404117" />
+      <window_info anchor="bottom" id="Android Profiler" order="10" show_stripe_button="false" weight="0.49404117" />
       <window_info anchor="bottom" id="Logcat" order="11" weight="0.32936078" />
-      <window_info anchor="right" id="Word Book" order="0" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Gradle" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Flutter Inspector" order="4" />
-      <window_info anchor="right" id="Flutter Outline" order="5" />
-      <window_info anchor="right" id="Key Promoter X" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info active="true" anchor="right" id="Preview" order="8" visible="true" weight="0.32995737" />
-      <window_info anchor="right" id="Device File Explorer" order="9" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="right" id="Gradle" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info anchor="right" id="Flutter Inspector" order="3" />
+      <window_info anchor="right" id="Flutter Outline" order="4" />
+      <window_info anchor="right" id="Key Promoter X" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info active="true" anchor="right" id="Preview" order="7" visible="true" weight="0.32995737" />
+      <window_info anchor="right" id="Device File Explorer" order="8" side_tool="true" />
+      <window_info anchor="right" id="Word Book" order="9" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/demo/res/layout/chat_room_activity.xml" />
     <entry file="file://$PROJECT_DIR$/demo/res/layout/chat_rooms.xml" />
     <entry file="file://$PROJECT_DIR$/uikit/project.properties">
       <provider selected="true" editor-type-id="text-editor">
@@ -576,12 +579,12 @@
     <entry file="file://$PROJECT_DIR$/main/build.gradle" />
     <entry file="file://$PROJECT_DIR$/main/AndroidManifest.xml" />
     <entry file="file://$PROJECT_DIR$/uikit/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="1" selection-end-column="36" />
         </state>
       </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/zxy_demo/assets/js/page.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -689,12 +692,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/demo.iml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -724,20 +727,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zxy_demo/src/com/netease/nim/provider/IMNIMContentProvider.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/com/netease/nim/demo/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/zxy_demo/src/com/netease/nim/provider/IMNIMContentProvider.kt" />
     <entry file="file://$PROJECT_DIR$/demo/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
@@ -752,20 +742,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/zxy_demo/src/com/netease/nim/provider/IMUpdateProvider.kt" />
+    <entry file="file://$PROJECT_DIR$/zxy_demo/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="521" column="63" selection-start-line="521" selection-start-column="63" selection-end-line="521" selection-end-column="63" />
+        </state>
+      </provider>
       <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zxy_demo/src/com/netease/nim/provider/IMUpdateProvider.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10-bin/caches/modules-2/files-2.1/com.huawei.android.hms/base/2.6.0.301/f754553d52c21ea9d0a44dc49eacef3cfb931720/base-2.6.0.301-sources.jar!/com/huawei/hms/update/provider/UpdateProvider.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -774,20 +758,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zxy_demo/build.gradle">
+    <entry file="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10-bin/caches/transforms-1/files-1.1/base-2.6.0.301.aar/e4ae83b5cfb53d0ebe9ff839670b048f/jars/classes.jar!/com/huawei/hms/update/provider/UpdateProvider.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="125" column="50" lean-forward="true" selection-start-line="125" selection-start-column="50" selection-end-line="125" selection-end-column="50" />
+        <state relative-caret-position="115">
+          <caret line="5" column="38" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#4561#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zxy_demo/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
+    <entry file="file://$PROJECT_DIR$/zxy_demo/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="582" column="22" lean-forward="true" selection-start-line="380" selection-start-column="7" selection-end-line="582" selection-end-column="22" />
+        <state relative-caret-position="297">
+          <caret line="120" column="36" selection-start-line="120" selection-start-column="32" selection-end-line="120" selection-end-column="36" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/src/com/netease/nim/demo/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#316#334#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
   </component>
 </project>

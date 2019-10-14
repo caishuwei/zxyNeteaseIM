@@ -118,6 +118,7 @@ dependencies {
 
     api 'com.meizu.flyme.internet:push-internal:3.6.3@aar'
     api 'com.huawei.android.hms:push:2.6.0.301'
+    api 'com.huawei.android.hms:base:2.6.0.301'
 
     api 'com.netease.nimlib:jsbridge:1.3.1'
 

@@ -4,6 +4,25 @@
             "outputFile": "D:\\Develop\\Android\\workspacesModule\\zxyNeteaseIM\\demo\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
+                    "source": "C:\\Users\\EDZ\\.gradle\\wrapper\\dists\\gradle-4.10-bin\\caches\\transforms-1\\files-1.1\\media-1.0.0.aar\\9e36864aab2fc2978b8062b34e32ffc3\\res\\values-v21\\values-v21.xml",
+                    "from": {
+                        "startLines": "2,5,8,11",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,223,386,554",
+                        "endLines": "4,7,10,13",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "218,381,549,716"
+                    },
+                    "to": {
+                        "startLines": "266,269,273,277",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "19512,19680,19969,20265",
+                        "endLines": "268,271,275,279",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "19675,19838,20132,20427"
+                    }
+                },
+                {
                     "source": "C:\\Users\\EDZ\\.gradle\\wrapper\\dists\\gradle-4.10-bin\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\307a9e9bd65fc1ca681d44a5d2cb65d3\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,17,19,20,21,22,24,26,27,28,29,30,32,34,36,38,40,42,43,48,50,52,53,54,56,58,59,60,61,62,63,106,109,152,155,158,160,162,164,167,171,174,175,176,179,180,181,182,183,184,187,188,190,192,194,196,200,202,203,204,205,207,211,213,215,216,217,218,219,220,222,223,224,234,235,236,248",
@@ -23,6 +42,44 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\EDZ\\.gradle\\wrapper\\dists\\gradle-4.10-bin\\caches\\transforms-1\\files-1.1\\jetified-leakcanary-android-1.6.3.aar\\fb01f9b87b004e4a149d1ae2a6572099\\res\\values-v21\\values-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "3",
+                        "endColumns": "10",
+                        "endOffsets": "140"
+                    },
+                    "to": {
+                        "startLines": "320",
+                        "startColumns": "4",
+                        "startOffsets": "22655",
+                        "endLines": "321",
+                        "endColumns": "10",
+                        "endOffsets": "22740"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\EDZ\\.gradle\\wrapper\\dists\\gradle-4.10-bin\\caches\\transforms-1\\files-1.1\\material-1.0.0.aar\\a465f7f491ac8796e70625361acf5019\\res\\values-v21\\values-v21.xml",
+                    "from": {
+                        "startLines": "2,10,18,26",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,484,910,1333",
+                        "endLines": "9,17,25,33",
+                        "endColumns": "10,10,10,10",
+                        "endOffsets": "479,905,1328,1763"
+                    },
+                    "to": {
+                        "startLines": "280,288,296,304",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "20432,20861,21287,21710",
+                        "endLines": "287,295,303,311",
+                        "endColumns": "10,10,10,10",
+                        "endOffsets": "20856,21282,21705,22140"
+                    }
+                },
+                {
                     "source": "C:\\Users\\EDZ\\.gradle\\wrapper\\dists\\gradle-4.10-bin\\caches\\transforms-1\\files-1.1\\core-1.1.0.aar\\b9e5d219f2d160c234f7b29fd346382c\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
@@ -33,12 +90,12 @@
                         "endOffsets": "154,218,285,349,465,591,717,845,1017,1355"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,264,265,266,267,268,271",
+                        "startLines": "2,3,4,5,264,265,272,276,312,315",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,159,223,290,19270,19386,19512,19638,19766,19938",
-                        "endLines": "2,3,4,5,264,265,266,267,270,275",
+                        "startOffsets": "55,159,223,290,19270,19386,19843,20137,22145,22317",
+                        "endLines": "2,3,4,5,264,265,272,276,314,319",
                         "endColumns": "103,63,66,63,115,125,125,127,12,12",
-                        "endOffsets": "154,218,285,349,19381,19507,19633,19761,19933,20271"
+                        "endOffsets": "154,218,285,349,19381,19507,19964,20260,22312,22650"
                     }
                 }
             ]

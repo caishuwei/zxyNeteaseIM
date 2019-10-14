@@ -4,6 +4,23 @@
             "outputFile": "D:\\Develop\\Android\\workspacesModule\\zxyNeteaseIM\\demo\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
             "map": [
                 {
+                    "source": "C:\\Users\\EDZ\\.gradle\\wrapper\\dists\\gradle-4.10-bin\\caches\\transforms-1\\files-1.1\\material-1.0.0.aar\\a465f7f491ac8796e70625361acf5019\\res\\values-large-v4\\values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,177",
+                        "endColumns": "121,133",
+                        "endOffsets": "172,306"
+                    },
+                    "to": {
+                        "startLines": "11,12",
+                        "startColumns": "4,4",
+                        "startOffsets": "752,874",
+                        "endColumns": "121,133",
+                        "endOffsets": "869,1003"
+                    }
+                },
+                {
                     "source": "C:\\Users\\EDZ\\.gradle\\wrapper\\dists\\gradle-4.10-bin\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\307a9e9bd65fc1ca681d44a5d2cb65d3\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
