@@ -1,5 +1,7 @@
 package com.netease.nim.provider
 
+import com.netease.nimlib.ipc.NIMContentProvider
+
 /**
  * Created by zxy on 2019/10/14-10:37
  * Class functions
@@ -7,6 +9,6 @@ package com.netease.nim.provider
  * *
  * ******************************************
  */
-class MyIMNIMContentProvider {
+class MyIMNIMContentProvider:NIMContentProvider() {
 
 }
