@@ -8,6 +8,7 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestBuilder;
@@ -17,9 +18,7 @@ import com.netease.nim.uikit.common.util.media.ImageUtil;
 
 import java.io.File;
 
-import androidx.appcompat.widget.AppCompatImageView;
-
-public class MsgThumbImageView extends AppCompatImageView {
+public class MsgThumbImageView extends ImageView {
 
     public MsgThumbImageView(Context context) {
         super(context);
@@ -116,12 +115,12 @@ public class MsgThumbImageView extends AppCompatImageView {
                     .fitCenter()
                     .placeholder(R.drawable.nim_image_default)
                     .error(R.drawable.nim_image_default);
-
-            builder = Glide.with(getContext().getApplicationContext())
-                    .asBitmap()
-                    .apply(options)
-                    .load(new File(path))
-            ;
+                builder = Glide.with(getContext().getApplicationContext())
+                        .asBitmap()
+                        .apply(options)
+                        .load(path);
+                    //   .load(new File(path));
+        //    }
         }
         builder.into(this);
     }

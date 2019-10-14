@@ -8,10 +8,11 @@ import android.net.Uri;
 import android.os.Build;
 import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.netease.nim.uikit.R;
 import com.netease.nim.uikit.business.session.activity.CaptureVideoActivity;
-import com.netease.nim.uikit.common.ToastHelper;
 import com.netease.nim.uikit.common.ui.dialog.CustomAlertDialog;
 import com.netease.nim.uikit.common.util.C;
 import com.netease.nim.uikit.common.util.file.AttachmentStore;
@@ -74,12 +75,15 @@ public class VideoMessageHelper {
      * 拍摄视频
      */
     protected void chooseVideoFromCamera() {
-        if (!StorageUtil.hasEnoughSpaceForWrite(activity, StorageType.TYPE_VIDEO, true)) {
+        if (!StorageUtil.hasEnoughSpaceForWrite(activity,
+                StorageType.TYPE_VIDEO, true)) {
             return;
         }
-        videoFilePath = StorageUtil.getWritePath(activity, StringUtil.get36UUID() + C.FileSuffix.MP4,
-                                                 StorageType.TYPE_TEMP);
+        videoFilePath = StorageUtil.getWritePath(
+                activity, StringUtil.get36UUID()
+                        + C.FileSuffix.MP4, StorageType.TYPE_TEMP);
         videoFile = new File(videoFilePath);
+
         // 启动视频录制
         CaptureVideoActivity.start(activity, videoFilePath, captureRequestCode);
     }
@@ -104,7 +108,7 @@ public class VideoMessageHelper {
         try {
             activity.startActivityForResult(intent, localRequestCode);
         } catch (ActivityNotFoundException e) {
-            ToastHelper.showToast(activity, R.string.gallery_invalid);
+            Toast.makeText(activity, R.string.gallery_invalid, Toast.LENGTH_SHORT).show();
         } catch (SecurityException e) {
 
         }
@@ -120,7 +124,7 @@ public class VideoMessageHelper {
         try {
             activity.startActivityForResult(mIntent, localRequestCode);
         } catch (ActivityNotFoundException e) {
-            ToastHelper.showToast(activity, R.string.gallery_invalid);
+            Toast.makeText(activity, R.string.gallery_invalid, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -148,7 +152,7 @@ public class VideoMessageHelper {
                 listener.onVideoPicked(new File(md5Path), md5);
             }
         } else {
-            ToastHelper.showToast(activity, R.string.video_exception);
+            Toast.makeText(activity, R.string.video_exception, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -221,12 +225,12 @@ public class VideoMessageHelper {
         }
 
         if (new File(file).length() > C.MAX_LOCAL_VIDEO_FILE_SIZE) {
-            ToastHelper.showToast(activity, R.string.im_choose_video_file_size_too_large);
+            Toast.makeText(activity, R.string.im_choose_video_file_size_too_large, Toast.LENGTH_SHORT).show();
             return false;
         }
 
         if (!StorageUtil.isInvalidVideoFile(file)) {
-            ToastHelper.showToast(activity, R.string.im_choose_video);
+            Toast.makeText(activity, R.string.im_choose_video, Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;

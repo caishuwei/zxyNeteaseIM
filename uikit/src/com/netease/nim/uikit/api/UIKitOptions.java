@@ -40,12 +40,12 @@ public class UIKitOptions {
     /**
      * 支持在 IM 聊天中@机器人
      */
-    public boolean aitIMRobot = false;
+    public boolean aitIMRobot = true;
 
     /**
      * 支持在 Chat Room 中@机器人
      */
-    public boolean aitChatRoomRobot = false;
+    public boolean aitChatRoomRobot = true;
 
     /**
      * UIKit 异步初始化
@@ -97,6 +97,11 @@ public class UIKitOptions {
      * IM 发送出去的消息时，内容区域背景的drawable id
      */
     public int messageRightBackground = R.drawable.nim_message_item_right_selector;
+
+    /**
+     * IM 发送出去的消息（自定义消息），内容区域背景的drawable id
+     */
+    public int messageRightWhiteBackground = R.drawable.nim_message_item_right_white;
 
     /**
      * chat room 接收到的消息时，内容区域背景的drawable id

@@ -1,8 +1,8 @@
 package com.netease.nim.uikit.common.ui.recyclerview.listener;
 
 import android.os.Build;
-import androidx.core.view.GestureDetectorCompat;
-import androidx.recyclerview.widget.RecyclerView;
+import android.support.v4.view.GestureDetectorCompat;
+import android.support.v7.widget.RecyclerView;
 import android.view.GestureDetector;
 import android.view.HapticFeedbackConstants;
 import android.view.MotionEvent;
@@ -154,7 +154,6 @@ public abstract class SimpleClickListener<T extends IRecyclerView> implements Re
                     onItemClick(baseAdapter, pressedView, vh.getLayoutPosition() - baseAdapter.getHeaderLayoutCount());
                 }
                 resetPressedView(pressedView);
-
             }
             return true;
         }

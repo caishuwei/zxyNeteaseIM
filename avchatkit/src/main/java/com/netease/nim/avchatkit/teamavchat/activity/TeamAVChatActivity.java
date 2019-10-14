@@ -2,11 +2,19 @@ package com.netease.nim.avchatkit.teamavchat.activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import android.os.PowerManager;
+import android.os.Vibrator;
+import android.support.annotation.NonNull;
+import android.support.v7.widget.AppCompatTextView;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.util.Pair;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,10 +33,9 @@ import com.netease.nim.avchatkit.common.permission.MPermission;
 import com.netease.nim.avchatkit.common.permission.annotation.OnMPermissionDenied;
 import com.netease.nim.avchatkit.common.permission.annotation.OnMPermissionGranted;
 import com.netease.nim.avchatkit.common.permission.annotation.OnMPermissionNeverAskAgain;
-import com.netease.nim.avchatkit.common.recyclerview.decoration.SpacingDecoration;
-import com.netease.nim.avchatkit.common.util.ScreenUtil;
 import com.netease.nim.avchatkit.config.AVChatConfigs;
 import com.netease.nim.avchatkit.config.AVPrivatizationConfig;
+import com.netease.nim.avchatkit.constant.AVChatExitCode;
 import com.netease.nim.avchatkit.controll.AVChatSoundPlayer;
 import com.netease.nim.avchatkit.teamavchat.TeamAVChatNotification;
 import com.netease.nim.avchatkit.teamavchat.TeamAVChatVoiceMuteDialog;
@@ -37,7 +44,6 @@ import com.netease.nim.avchatkit.teamavchat.module.SimpleAVChatStateObserver;
 import com.netease.nim.avchatkit.teamavchat.module.TeamAVChatItem;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.Observer;
-import com.netease.nimlib.sdk.ResponseCode;
 import com.netease.nimlib.sdk.StatusCode;
 import com.netease.nimlib.sdk.auth.AuthServiceObserver;
 import com.netease.nimlib.sdk.avchat.AVChatCallback;
@@ -45,25 +51,27 @@ import com.netease.nimlib.sdk.avchat.AVChatManager;
 import com.netease.nimlib.sdk.avchat.AVChatStateObserver;
 import com.netease.nimlib.sdk.avchat.AVChatStateObserverLite;
 import com.netease.nimlib.sdk.avchat.constant.AVChatControlCommand;
+import com.netease.nimlib.sdk.avchat.constant.AVChatEventType;
 import com.netease.nimlib.sdk.avchat.constant.AVChatType;
 import com.netease.nimlib.sdk.avchat.constant.AVChatUserRole;
 import com.netease.nimlib.sdk.avchat.constant.AVChatVideoCropRatio;
-import com.netease.nimlib.sdk.avchat.constant.AVChatVideoScalingType;
+import com.netease.nimlib.sdk.avchat.model.AVChatCalleeAckEvent;
 import com.netease.nimlib.sdk.avchat.model.AVChatControlEvent;
 import com.netease.nimlib.sdk.avchat.model.AVChatData;
 import com.netease.nimlib.sdk.avchat.model.AVChatParameters;
 import com.netease.nimlib.sdk.avchat.video.AVChatCameraCapturer;
 import com.netease.nimlib.sdk.avchat.video.AVChatVideoCapturerFactory;
+import com.netease.nimlib.sdk.uinfo.UserService;
+import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
 import com.netease.nrtc.video.render.IVideoRender;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
-
-import static com.netease.nim.avchatkit.teamavchat.module.TeamAVChatItem.TYPE.TYPE_DATA;
 
 /**
  * 多人音视频界面：包含音视频通话界面和接受拒绝界面
@@ -77,7 +85,7 @@ import static com.netease.nim.avchatkit.teamavchat.module.TeamAVChatItem.TYPE.TY
  * <li>打开视频模块 {@link AVChatManager#enableVideo()}。</li>
  * <li>设置本地预览画布 {@link AVChatManager#setupLocalVideoRender(IVideoRender, boolean, int)} 。</li>
  * <li>设置视频通话可选参数[可以不设置] {@link AVChatManager#setParameter(AVChatParameters.Key, Object)}, {@link AVChatManager#setParameters(AVChatParameters)}。</li>
- * <li>创建并设置本地视频预览源 {@link AVChatVideoCapturerFactory#createCameraCapturer(boolean )}, {@link AVChatManager#setupVideoCapturer(AVChatVideoCapturer)}</li>
+ * <li>创建并设置本地视频预览源 {@link AVChatVideoCapturerFactory#createCameraCapturer(boolean )}, {@link AVChatManager#setupVideoCapturer)}</li>
  * <li>打开本地视频预览 {@link AVChatManager#startVideoPreview()}。</li>
  * <li>加入房间 {@link AVChatManager#joinRoom2(String, AVChatType, AVChatCallback)}。</li>
  * <li>开始多人会议或者互动直播，以及各种音视频操作。</li>
@@ -88,26 +96,29 @@ import static com.netease.nim.avchatkit.teamavchat.module.TeamAVChatItem.TYPE.TY
  * </ol></p>
  */
 
-public class TeamAVChatActivity extends UI {
+public class TeamAVChatActivity extends UI implements SensorEventListener{
     // CONST
     private static final String TAG = "TeamAVChat";
     private static final String KEY_RECEIVED_CALL = "call";
     private static final String KEY_TEAM_ID = "teamid";
     private static final String KEY_ROOM_ID = "roomid";
-    private static final String KEY_ACCOUNTS = "accounts";
+    private static final String KEY_STUDLIST= "studList";
+    private static final String KEY_TEACLIST= "teacList";
     private static final String KEY_TNAME = "teamName";
-    private static final int AUTO_REJECT_CALL_TIMEOUT = 45 * 1000;
-    private static final int CHECK_RECEIVED_CALL_TIMEOUT = 45 * 1000;
+    private static final int AUTO_REJECT_CALL_TIMEOUT = 30 * 1000;
+    private static final int CHECK_RECEIVED_CALL_TIMEOUT = 30 * 1000;
     private static final int MAX_SUPPORT_ROOM_USERS_COUNT = 9;
     private static final int BASIC_PERMISSION_REQUEST_CODE = 0x100;
     // DATA
     private String teamId;
     private String roomId;
     private long chatId;
-    private ArrayList<String> accounts;
+    private List<String> studList;
+    private List<String> teacList;
     private boolean receivedCall;
     private boolean destroyRTC;
     private String teamName;
+    private int role;
 
     // CONTEXT
     private Handler mainHandler;
@@ -131,7 +142,7 @@ public class TeamAVChatActivity extends UI {
     // CONTROL STATE
     boolean videoMute = false;
     boolean microphoneMute = false;
-    boolean speakerMode = true;
+    boolean speakerMode = false;
 
     // AVCAHT OBSERVER
     private AVChatStateObserver stateObserver;
@@ -141,7 +152,14 @@ public class TeamAVChatActivity extends UI {
 
     private TeamAVChatNotification notifier;
 
-    public static void startActivity(Context context, boolean receivedCall, String teamId, String roomId, ArrayList<String> accounts, String teamName) {
+    private Sensor mSensor;
+    private PowerManager.WakeLock mWakeLock;
+    private SensorManager sensorManager;
+    private AudioManager audioManager;
+    private PowerManager mPowerManager;
+    private int label =0;
+
+    public static void startActivity(Context context, boolean receivedCall, String teamId, String roomId, List<String> studList,List<String> teacList, String teamName,int role) {
         needFinish = false;
         Intent intent = new Intent();
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
@@ -149,8 +167,10 @@ public class TeamAVChatActivity extends UI {
         intent.putExtra(KEY_RECEIVED_CALL, receivedCall);
         intent.putExtra(KEY_ROOM_ID, roomId);
         intent.putExtra(KEY_TEAM_ID, teamId);
-        intent.putExtra(KEY_ACCOUNTS, accounts);
+        intent.putExtra(KEY_STUDLIST, (Serializable) studList);
+        intent.putExtra(KEY_TEACLIST, (Serializable) teacList);
         intent.putExtra(KEY_TNAME, teamName);
+        intent.putExtra("role",role);
         context.startActivity(intent);
     }
 
@@ -173,8 +193,16 @@ public class TeamAVChatActivity extends UI {
         findLayouts();
         showViews();
         setChatting(true);
-
         NIMClient.getService(AuthServiceObserver.class).observeOnlineStatus(userStatusObserver, true);
+        AVChatManager.getInstance().setSpeaker(false);  //默认不开启免提
+
+        //注册传感器
+        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        mSensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+        //息屏设置
+        mPowerManager = (PowerManager) getSystemService(Context.POWER_SERVICE);
+        mWakeLock = mPowerManager.newWakeLock(PowerManager.PROXIMITY_SCREEN_OFF_WAKE_LOCK,TAG);
+        audioManager = (AudioManager) this.getSystemService(Context.AUDIO_SERVICE);
     }
 
     @Override
@@ -188,8 +216,44 @@ public class TeamAVChatActivity extends UI {
         // 取消通知栏
         activeCallingNotifier(false);
         // 禁止自动锁屏
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
-                WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
+//                WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        //注册传感器,先判断有没有传感器
+        if (mSensor != null)
+            sensorManager.registerListener(this, mSensor, SensorManager.SENSOR_DELAY_NORMAL);
+    }
+
+    /**
+     * 传感器变化
+     *
+     * @param event
+     */
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+        if (event.values[0] == 0.0) {
+            //贴近手机
+            //设置免提
+//            audioManager.setSpeakerphoneOn(false);
+//            audioManager.setMode(AudioManager.MODE_IN_COMMUNICATION);
+            //关闭屏幕
+            if (!mWakeLock.isHeld())
+                mWakeLock.acquire();
+
+        } else {
+            //离开手机
+            audioManager.setMode(AudioManager.MODE_NORMAL);
+            //设置免提
+         //   audioManager.setSpeakerphoneOn(true);
+
+            //唤醒设备
+            if (mWakeLock.isHeld())
+                mWakeLock.release();
+        }
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
     }
 
     @Override
@@ -222,6 +286,13 @@ public class TeamAVChatActivity extends UI {
         activeCallingNotifier(false);
         setChatting(false);
         NIMClient.getService(AuthServiceObserver.class).observeOnlineStatus(userStatusObserver, false);
+        //传感器取消监听
+        sensorManager.unregisterListener(this);
+        //释放息屏
+        if (mWakeLock.isHeld())
+            mWakeLock.release();
+        mWakeLock = null;
+        mPowerManager = null;
     }
 
     @Override
@@ -254,10 +325,12 @@ public class TeamAVChatActivity extends UI {
         receivedCall = intent.getBooleanExtra(KEY_RECEIVED_CALL, false);
         roomId = intent.getStringExtra(KEY_ROOM_ID);
         teamId = intent.getStringExtra(KEY_TEAM_ID);
-        accounts = (ArrayList<String>) intent.getSerializableExtra(KEY_ACCOUNTS);
+        studList = (List<String>) intent.getSerializableExtra(KEY_STUDLIST);
+        teacList = (List<String>) intent.getSerializableExtra(KEY_TEACLIST);
+        role = intent.getIntExtra("role",0);
         teamName = intent.getStringExtra(KEY_TNAME);
-        LogUtil.i(TAG, "onIntent, roomId=" + roomId + ", teamId=" + teamId
-                + ", receivedCall=" + receivedCall + ", accounts=" + accounts.size() + ", teamName = " + teamName);
+//        LogUtil.i(TAG, "onIntent, roomId=" + roomId + ", teamId=" + teamId
+//                + ", receivedCall=" + receivedCall + ", accounts=" + studList.size() + ", teamName = " + teamName);
     }
 
     private void findLayouts() {
@@ -297,6 +370,61 @@ public class TeamAVChatActivity extends UI {
         callLayout.setVisibility(View.VISIBLE);
         // 提示
         TextView textView = (TextView) callLayout.findViewById(R.id.received_call_tip);
+        Log.e("role",role+"");
+        if (role == 1) {  //老师
+            View topBg = callLayout.findViewById(R.id.top_stud);
+            topBg.setBackgroundResource(R.drawable.call_stud_bg);
+            if (studList != null && studList.size() != 0) {
+                AppCompatTextView topstudName = callLayout.findViewById(R.id.call_top_stud_name);
+                AppCompatTextView topstudContent = callLayout.findViewById(R.id.call_top_content);
+                NimUserInfo user = NIMClient.getService(UserService.class).getUserInfo(studList.get(0).toLowerCase());
+                if (user != null) {
+                    topstudName.setText(user.getName() == null ? "" : user.getName());
+                //    topstudContent.setText(user.getName() == null ? "学生正在和您通话" : user.getName()+"学生正在和您通话");
+                }
+            }
+            View bottomBg = callLayout.findViewById(R.id.bottom_teac);
+            bottomBg.setBackgroundResource(R.drawable.call_teac_bg);
+            if (teacList != null && teacList.size() != 0) {
+                AppCompatTextView bottomTeacName = callLayout.findViewById(R.id.call_bottom_teac_name);
+                AppCompatTextView bottomContent = callLayout.findViewById(R.id.call_bottom_content);
+                NimUserInfo user = NIMClient.getService(UserService.class).getUserInfo(teacList.get(0).toLowerCase());
+                if (user != null) {
+                    bottomTeacName.setText(user.getName() == null ? "" : user.getName());
+                //    bottomContent.setText(user.getName() == null ? "您正在和学生通话" : "您正在和"+user.getName()+"学生通话");
+                }
+            }
+        } else {  //学生
+            View topBg = callLayout.findViewById(R.id.top_stud);
+            topBg.setBackgroundResource(R.drawable.call_teac_bg);
+            if (teacList != null && teacList.size() != 0) {
+                AppCompatTextView topstudName = callLayout.findViewById(R.id.call_top_stud_name);
+                AppCompatTextView topteacName = callLayout.findViewById(R.id.call_top_teac_name);
+                AppCompatTextView topContent = callLayout.findViewById(R.id.call_top_content);
+                topstudName.setVisibility(View.GONE);
+                topteacName.setVisibility(View.VISIBLE);
+
+                NimUserInfo user = NIMClient.getService(UserService.class).getUserInfo(teacList.get(0).toLowerCase());
+                if (user != null) {
+                    topteacName.setText(user.getName() == null ? "" : user.getName());
+                //    topContent.setText(user.getName() == null ? "您正在和学生通话" : "您正在和"+user.getName()+"学生通话");
+                }
+            }
+            View bottomBg = callLayout.findViewById(R.id.bottom_teac);
+            bottomBg.setBackgroundResource(R.drawable.call_stud_bg);
+            if (studList != null && studList.size() != 0) {
+                AppCompatTextView bottomTeacName = callLayout.findViewById(R.id.call_bottom_teac_name);
+                AppCompatTextView bottomStudName = callLayout.findViewById(R.id.call_bottom_stud_name);
+                AppCompatTextView bottomContent = callLayout.findViewById(R.id.call_bottom_content);
+                bottomTeacName.setVisibility(View.GONE);
+                bottomStudName.setVisibility(View.VISIBLE);
+                NimUserInfo user = NIMClient.getService(UserService.class).getUserInfo(studList.get(0).toLowerCase());
+                if (user != null) {
+                    bottomStudName.setText(user.getName() == null ? "" : user.getName());
+                 //   bottomContent.setText(user.getName() == null ? "学生正在和您通话" : user.getName()+"学生正在和您通话");
+                }
+            }
+        }
 
         textView.setText(teamName + " 的视频通话");
 
@@ -333,12 +461,90 @@ public class TeamAVChatActivity extends UI {
     private void showSurfaceLayout() {
         // 列表
         surfaceLayout.setVisibility(View.VISIBLE);
-        recyclerView = (RecyclerView) surfaceLayout.findViewById(R.id.recycler_view);
-        initRecyclerView();
+        Log.e("role",role+"");
+        if (role == 1) {  //老师
+            View topmBg = callLayout.findViewById(R.id.top_stud);
+            topmBg.setBackgroundResource(R.drawable.call_stud_bg);
+            if (studList != null && studList.size() != 0) {
+                AppCompatTextView topstudName = surfaceLayout.findViewById(R.id.top_stud_name);
+                AppCompatTextView topstudContent = surfaceLayout.findViewById(R.id.top_content);
+                NimUserInfo user = NIMClient.getService(UserService.class).getUserInfo(studList.get(0).toLowerCase());
+                if (user != null) {
+                    topstudName.setText(user.getName() == null ? "" : user.getName());
+                    //    topstudContent.setText(user.getName() == null ? "学生正在和您通话" : user.getName()+"学生正在和您通话");
+                }
+            }
+            View bottomBg = callLayout.findViewById(R.id.bottom_teac);
+            bottomBg.setBackgroundResource(R.drawable.call_teac_bg);
+            if (teacList != null && teacList.size() != 0) {
+                AppCompatTextView bottomTeacName = surfaceLayout.findViewById(R.id.bottom_teac_name);
+                AppCompatTextView bottomContent = surfaceLayout.findViewById(R.id.bottom_content);
+                NimUserInfo user = NIMClient.getService(UserService.class).getUserInfo(teacList.get(0).toLowerCase());
+                if (user != null) {
+                    bottomTeacName.setText(user.getName() == null ? "" : user.getName());
+                    //    bottomContent.setText(user.getName() == null ? "您正在和学生通话" : "您正在和"+user.getName()+"学生通话");
+                }
+            }
+        } else {  //学生
+            View topBg = surfaceLayout.findViewById(R.id.top);
+            topBg.setBackgroundResource(R.drawable.call_teac_bg);
+            if (teacList != null && teacList.size() != 0) {
+                AppCompatTextView topstudName = surfaceLayout.findViewById(R.id.top_stud_name);
+                AppCompatTextView topteacName = surfaceLayout.findViewById(R.id.top_teac_name);
+                AppCompatTextView topContent = surfaceLayout.findViewById(R.id.call_top_content);
+                topstudName.setVisibility(View.GONE);
+                topteacName.setVisibility(View.VISIBLE);
+
+                NimUserInfo user = NIMClient.getService(UserService.class).getUserInfo(teacList.get(0).toLowerCase());
+                if (user != null) {
+                    topteacName.setText(user.getName() == null ? "" : user.getName());
+                    //    topContent.setText(user.getName() == null ? "您正在和学生通话" : "您正在和"+user.getName()+"学生通话");
+                }
+            }
+            View bottomBg = surfaceLayout.findViewById(R.id.bottom_teac);
+            bottomBg.setBackgroundResource(R.drawable.call_stud_bg);
+            if (studList != null && studList.size() != 0) {
+                AppCompatTextView bottomTeacName = surfaceLayout.findViewById(R.id.bottom_teac_name);
+                AppCompatTextView bottomStudName = surfaceLayout.findViewById(R.id.bottom_stud_name);
+                AppCompatTextView bottomContent = surfaceLayout.findViewById(R.id.bottom_content);
+                bottomTeacName.setVisibility(View.GONE);
+                bottomStudName.setVisibility(View.VISIBLE);
+                NimUserInfo user = NIMClient.getService(UserService.class).getUserInfo(studList.get(0).toLowerCase());
+                if (user != null) {
+                    bottomStudName.setText(user.getName() == null ? "" : user.getName());
+                    //   bottomContent.setText(user.getName() == null ? "学生正在和您通话" : user.getName()+"学生正在和您通话");
+                }
+            }
+        }
+//        recyclerView = (RecyclerView) surfaceLayout.findViewById(R.id.recycler_view);
+//        initRecyclerView();
 
         // 通话计时
         timerText = (TextView) surfaceLayout.findViewById(R.id.timer_text);
-
+        //静音切换
+        surfaceLayout.findViewById(R.id.voice).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AVChatManager.getInstance().muteLocalAudio(microphoneMute = !microphoneMute);
+                surfaceLayout.findViewById(R.id.voice_img).setBackgroundResource(microphoneMute ?R.drawable.call_jingyin_light:R.drawable.call_jingyin);
+            }
+        });
+        //挂断
+        surfaceLayout.findViewById(R.id.call_hangup).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hangup();
+                finish();
+            }
+        });
+        //免提
+        surfaceLayout.findViewById(R.id.hands_free).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AVChatManager.getInstance().setSpeaker(speakerMode = !speakerMode);
+                surfaceLayout.findViewById(R.id.hands_free_img).setBackgroundResource(speakerMode ? R.drawable.call_mianti_light : R.drawable.call_mianti);
+            }
+        });
         // 控制按钮
         ViewGroup settingLayout = (ViewGroup) surfaceLayout.findViewById(R.id.avchat_setting_layout);
         for (int i = 0; i < settingLayout.getChildCount(); i++) {
@@ -393,7 +599,11 @@ public class TeamAVChatActivity extends UI {
 
             @Override
             public void onUserLeave(String account, int event) {
-                onAVChatUserLeave(account);
+                Log.e("hangup","挂断");
+                Toast.makeText(TeamAVChatActivity.this,"通话已结束",Toast.LENGTH_SHORT).show();
+                hangup();
+                finish();
+             //   onAVChatUserLeave(account);
             }
 
             @Override
@@ -454,61 +664,70 @@ public class TeamAVChatActivity extends UI {
     }
 
     private void onJoinRoomSuccess() {
-        startTimer();
-        startLocalPreview();
+//        startTimer();
+//        startLocalPreview();
         startTimerForCheckReceivedCall();
-        LogUtil.i(TAG, "team avchat running..." + ", roomId=" + roomId);
+//        LogUtil.i(TAG, "team avchat running..." + ", roomId=" + roomId);
     }
 
     private void onJoinRoomFailed(int code, Throwable e) {
-        if (code == ResponseCode.RES_ENONEXIST) {
-            showToast(getString(R.string.t_avchat_join_fail_not_exist));
-        } else {
-            showToast("join room failed, code=" + code + ", e=" + (e == null ? "" : e.getMessage()));
-        }
+        Toast.makeText(this,"通话已结束",Toast.LENGTH_SHORT).show();
+        hangup();
+        finish();
+//        if (code == ResponseCode.RES_ENONEXIST) {
+//            showToast(getString(R.string.t_avchat_join_fail_not_exist));
+//        } else {
+//            showToast("join room failed, code=" + code + ", e=" + (e == null ? "" : e.getMessage()));
+//        }
     }
 
     public void onAVChatUserJoined(String account) {
-        int index = getItemIndex(account);
-        if (index >= 0) {
-            TeamAVChatItem item = data.get(index);
-            IVideoRender surfaceView = adapter.getViewHolderSurfaceView(item);
-            if (surfaceView != null) {
-                item.state = TeamAVChatItem.STATE.STATE_PLAYING;
-                item.videoLive = true;
-                adapter.notifyItemChanged(index);
-                AVChatManager.getInstance().setupRemoteVideoRender(account, surfaceView, false, AVChatVideoScalingType.SCALE_ASPECT_FIT);
-            }
+        Vibrator vibrator = (Vibrator)this.getSystemService(this.VIBRATOR_SERVICE);
+        vibrator.vibrate(300);
+        if (timer == null) {
+            startTimer();
         }
-        updateAudioMuteButtonState();
-
-        LogUtil.i(TAG, "on user joined, account=" + account);
+        LogUtil.i(TAG, "team avchat running..." + ", roomId=" + roomId);
+//        int index = getItemIndex(account);
+//        if (index >= 0) {
+//            TeamAVChatItem item = data.get(index);
+//            IVideoRender surfaceView = adapter.getViewHolderSurfaceView(item);
+//            if (surfaceView != null) {
+//                item.state = TeamAVChatItem.STATE.STATE_PLAYING;
+//                item.videoLive = true;
+//                adapter.notifyItemChanged(index);
+//                AVChatManager.getInstance().setupRemoteVideoRender(account, surfaceView, false, AVChatVideoScalingType.SCALE_ASPECT_FIT);
+//            }
+//        }
+//        updateAudioMuteButtonState();
+//
+//        LogUtil.i(TAG, "on user joined, account=" + account);
     }
 
     public void onAVChatUserLeave(String account) {
-        int index = getItemIndex(account);
-        if (index >= 0) {
-            TeamAVChatItem item = data.get(index);
-            item.state = TeamAVChatItem.STATE.STATE_HANGUP;
-            item.volume = 0;
-            adapter.notifyItemChanged(index);
-        }
-        updateAudioMuteButtonState();
-
-        LogUtil.i(TAG, "on user leave, account=" + account);
+//        int index = getItemIndex(account);
+//        if (index >= 0) {
+//            TeamAVChatItem item = data.get(index);
+//            item.state = TeamAVChatItem.STATE.STATE_HANGUP;
+//            item.volume = 0;
+//            adapter.notifyItemChanged(index);
+//        }
+//        updateAudioMuteButtonState();
+//
+//        LogUtil.i(TAG, "on user leave, account=" + account);
     }
 
     private void startLocalPreview() {
-        if (data.size() > 1 && data.get(0).account.equals(AVChatKit.getAccount())) {
-            IVideoRender surfaceView = adapter.getViewHolderSurfaceView(data.get(0));
-            if (surfaceView != null) {
-                AVChatManager.getInstance().setupLocalVideoRender(surfaceView, false, AVChatVideoScalingType.SCALE_ASPECT_FIT);
-                AVChatManager.getInstance().startVideoPreview();
-                data.get(0).state = TeamAVChatItem.STATE.STATE_PLAYING;
-                data.get(0).videoLive = true;
-                adapter.notifyItemChanged(0);
-            }
-        }
+//        if (data.size() > 1 && data.get(0).account.equals(AVChatKit.getAccount())) {
+//            IVideoRender surfaceView = adapter.getViewHolderSurfaceView(data.get(0));
+//            if (surfaceView != null) {
+//                AVChatManager.getInstance().setupLocalVideoRender(surfaceView, false, AVChatVideoScalingType.SCALE_ASPECT_FIT);
+//                AVChatManager.getInstance().startVideoPreview();
+//                data.get(0).state = TeamAVChatItem.STATE.STATE_PLAYING;
+//                data.get(0).videoLive = true;
+//                adapter.notifyItemChanged(0);
+//            }
+//        }
     }
 
     /**
@@ -532,37 +751,36 @@ public class TeamAVChatActivity extends UI {
     }
 
     private void notifyVideoLiveChanged(String account, boolean live) {
-        int index = getItemIndex(account);
-        if (index >= 0) {
-            TeamAVChatItem item = data.get(index);
-            item.videoLive = live;
-            adapter.notifyItemChanged(index);
-        }
+//        int index = getItemIndex(account);
+//        if (index >= 0) {
+//            TeamAVChatItem item = data.get(index);
+//            item.videoLive = live;
+//            adapter.notifyItemChanged(index);
+//        }
     }
 
     private void onAudioVolume(Map<String, Integer> speakers) {
-        for (TeamAVChatItem item : data) {
-            if (speakers.containsKey(item.account)) {
-                item.volume = speakers.get(item.account);
-                adapter.updateVolumeBar(item);
-            }
-        }
+//        for (TeamAVChatItem item : data) {
+//            if (speakers.containsKey(item.account)) {
+//                item.volume = speakers.get(item.account);
+//                adapter.updateVolumeBar(item);
+//            }
+//        }
     }
 
     private void updateSelfItemVideoState(boolean live) {
-        int index = getItemIndex(AVChatKit.getAccount());
-        if (index >= 0) {
-            TeamAVChatItem item = data.get(index);
-            item.videoLive = live;
-            adapter.notifyItemChanged(index);
-        }
+//        int index = getItemIndex(AVChatKit.getAccount());
+//        if (index >= 0) {
+//            TeamAVChatItem item = data.get(index);
+//            item.videoLive = live;
+//            adapter.notifyItemChanged(index);
+//        }
     }
 
     private void hangup() {
         if (destroyRTC) {
             return;
         }
-
         try {
             AVChatManager.getInstance().stopVideoPreview();
             AVChatManager.getInstance().disableVideo();
@@ -607,15 +825,16 @@ public class TeamAVChatActivity extends UI {
         mainHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                int index = 0;
-                for (TeamAVChatItem item : data) {
-                    if (item.type == TYPE_DATA && item.state == TeamAVChatItem.STATE.STATE_WAITING) {
-                        item.state = TeamAVChatItem.STATE.STATE_END;
-                        adapter.notifyItemChanged(index);
-                    }
-                    index++;
-                }
-                checkAllHangUp();
+//                int index = 0;
+//                for (TeamAVChatItem item : data) {
+//                    if (item.type == TYPE_DATA && item.state == TeamAVChatItem.STATE.STATE_WAITING) {
+//                        item.state = TeamAVChatItem.STATE.STATE_END;
+//                    //    adapter.notifyItemChanged(index);
+//                    }
+//                    index++;
+//                }
+                //    checkAllHangUp();
+
             }
         }, CHECK_RECEIVED_CALL_TIMEOUT);
     }
@@ -644,13 +863,6 @@ public class TeamAVChatActivity extends UI {
      * 除了所有人都没接通，其他情况不做自动挂断
      */
     private void checkAllHangUp() {
-        for (TeamAVChatItem item : data) {
-            if (item.account != null &&
-                    !item.account.equals(AVChatKit.getAccount()) &&
-                    item.state != TeamAVChatItem.STATE.STATE_END) {
-                return;
-            }
-        }
         mainHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -658,6 +870,14 @@ public class TeamAVChatActivity extends UI {
                 finish();
             }
         }, 200);
+//        for (TeamAVChatItem item : data) {
+//            if (item.account != null &&
+//                    !item.account.equals(AVChatKit.getAccount()) &&
+//                    item.state != TeamAVChatItem.STATE.STATE_END) {
+//                return;
+//            }
+//        }
+
     }
 
     /**
@@ -706,7 +926,6 @@ public class TeamAVChatActivity extends UI {
             } else if (i == R.id.hangup) {// 挂断
                 hangup();
                 finish();
-
             }
         }
     };
@@ -757,44 +976,45 @@ public class TeamAVChatActivity extends UI {
 
     private void initRecyclerView() {
         // 确认数据源,自己放在首位
-        data = new ArrayList<>(accounts.size() + 1);
-        for (String account : accounts) {
-            if (account.equals(AVChatKit.getAccount())) {
-                continue;
-            }
-
-            data.add(new TeamAVChatItem(TYPE_DATA, teamId, account));
-        }
-
-        TeamAVChatItem selfItem = new TeamAVChatItem(TYPE_DATA, teamId, AVChatKit.getAccount());
-        selfItem.state = TeamAVChatItem.STATE.STATE_PLAYING; // 自己直接采集摄像头画面
-        data.add(0, selfItem);
-
-        // 补充占位符
-        int holderLength = MAX_SUPPORT_ROOM_USERS_COUNT - data.size();
-        for (int i = 0; i < holderLength; i++) {
-            data.add(new TeamAVChatItem(teamId));
-        }
-
-        // RecyclerView
-        adapter = new TeamAVChatAdapter(recyclerView, data);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
-        recyclerView.addItemDecoration(new SpacingDecoration(ScreenUtil.dip2px(1), ScreenUtil.dip2px(1), true));
+//        data = new ArrayList<>(accounts.size() + 1);
+//        for (String account : accounts) {
+//            if (account.equals(AVChatKit.getAccount())) {
+//                continue;
+//            }
+//
+//            data.add(new TeamAVChatItem(TYPE_DATA, teamId, account));
+//        }
+//
+//        TeamAVChatItem selfItem = new TeamAVChatItem(TYPE_DATA, teamId, AVChatKit.getAccount());
+//        selfItem.state = TeamAVChatItem.STATE.STATE_PLAYING; // 自己直接采集摄像头画面
+//        data.add(0, selfItem);
+//
+//        // 补充占位符
+//        int holderLength = MAX_SUPPORT_ROOM_USERS_COUNT - data.size();
+//        for (int i = 0; i < holderLength; i++) {
+//            data.add(new TeamAVChatItem(teamId));
+//        }
+//
+//        // RecyclerView
+//        adapter = new TeamAVChatAdapter(recyclerView, data);
+//        recyclerView.setAdapter(adapter);
+//        recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
+//        recyclerView.addItemDecoration(new SpacingDecoration(ScreenUtil.dip2px(1), ScreenUtil.dip2px(1), true));
     }
 
     private int getItemIndex(final String account) {
-        int index = 0;
-        boolean find = false;
-        for (TeamAVChatItem i : data) {
-            if (i.account.equals(account)) {
-                find = true;
-                break;
-            }
-            index++;
-        }
-
-        return find ? index : -1;
+//        int index = 0;
+//        boolean find = false;
+//        for (TeamAVChatItem i : data) {
+//            if (i.account.equals(account)) {
+//                find = true;
+//                break;
+//            }
+//            index++;
+//        }
+//
+//        return find ? index : -1;
+        return 0;
     }
 
     /**
@@ -838,9 +1058,9 @@ public class TeamAVChatActivity extends UI {
      * ************************************ helper ***************************************
      */
 
-    private void showToast(String content) {
-        Toast.makeText(TeamAVChatActivity.this, content, Toast.LENGTH_SHORT).show();
-    }
+//    private void showToast(String content) {
+//        Toast.makeText(TeamAVChatActivity.this, content, Toast.LENGTH_SHORT).show();
+//    }
 
     /**
      * 在线状态观察者

@@ -5,15 +5,20 @@ import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.netease.nim.uikit.R;
+import com.netease.nim.uikit.business.session.module.list.MessageListPanelEx;
 import com.netease.nim.uikit.business.session.module.list.MsgAdapter;
 import com.netease.nim.uikit.business.team.helper.TeamHelper;
+import com.netease.nim.uikit.common.CommonUtil;
 import com.netease.nim.uikit.common.ui.imageview.HeadImageView;
 import com.netease.nim.uikit.common.ui.recyclerview.adapter.BaseMultiItemFetchLoadAdapter;
 import com.netease.nim.uikit.common.ui.recyclerview.holder.BaseViewHolder;
@@ -26,8 +31,11 @@ import com.netease.nimlib.sdk.msg.MsgService;
 import com.netease.nimlib.sdk.msg.attachment.FileAttachment;
 import com.netease.nimlib.sdk.msg.constant.MsgDirectionEnum;
 import com.netease.nimlib.sdk.msg.constant.MsgStatusEnum;
+import com.netease.nimlib.sdk.msg.constant.MsgTypeEnum;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
+
+import java.util.Map;
 
 /**
  * 会话窗口消息列表项的ViewHolder基类，负责每个消息项的外层框架，包括头像，昵称，发送/接收进度条，重发按钮等。<br>
@@ -58,10 +66,12 @@ public abstract class MsgViewHolderBase extends RecyclerViewHolder<BaseMultiItem
     protected TextView readReceiptTextView;
     protected TextView ackMsgTextView;
 
+    public CheckBox checkBox;
     private HeadImageView avatarLeft;
     private HeadImageView avatarRight;
 
     public ImageView nameIconView;
+
 
     // contentContainerView的默认长按事件。如果子类需要不同的处理，可覆盖onItemLongClick方法
     // 但如果某些子控件会拦截触摸消息，导致contentContainer收不到长按事件，子控件也可在inflate时重新设置
@@ -173,7 +183,7 @@ public abstract class MsgViewHolderBase extends RecyclerViewHolder<BaseMultiItem
         message = data;
 
         inflate();
-        refresh();
+        refresh(position);
         bindHolder(holder);
     }
 
@@ -189,31 +199,52 @@ public abstract class MsgViewHolderBase extends RecyclerViewHolder<BaseMultiItem
         nameContainer = findViewById(R.id.message_item_name_layout);
         readReceiptTextView = findViewById(R.id.textViewAlreadyRead);
         ackMsgTextView = findViewById(R.id.team_ack_msg);
-
+        checkBox = findViewById(R.id.checkbox);
         // 这里只要inflate出来后加入一次即可
         if (contentContainer.getChildCount() == 0) {
             View.inflate(view.getContext(), getContentResId(), contentContainer);
         }
         inflateContentView();
+
     }
 
-    protected final void refresh() {
+    protected final void refresh(int position) {
         setHeadImageView();
         setNameTextView();
         setTimeTextView();
         setStatus();
         setOnClickListener();
-        setLongClickListener();
+        setLongClickListener(position);
         setContent();
         setReadReceipt();
         setAckMsg();
 
         bindContentView();
+        //多选按钮
+        if (MessageListPanelEx.lable == 2) {
+            MsgTypeEnum msgType = message.getMsgType();
+            if (msgType != MsgTypeEnum.notification) {
+                checkBox.setChecked(false);
+                checkBox.setVisibility(View.VISIBLE);
+                if (MessageListPanelEx.longClickMsg.getUuid().equals(message.getUuid())) {
+                    checkBox.setChecked(true);
+                }
+
+                RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) avatarLeft.getLayoutParams();
+                layoutParams.leftMargin = 80;
+            } else {
+                checkBox.setVisibility(View.GONE);
+            }
+        } else {
+            checkBox.setVisibility(View.GONE);
+            RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) avatarLeft.getLayoutParams();
+            layoutParams.leftMargin = 0;
+        }
     }
 
     public void refreshCurrentItem() {
         if (message != null) {
-            refresh();
+            //   refresh();
         }
     }
 
@@ -227,7 +258,6 @@ public abstract class MsgViewHolderBase extends RecyclerViewHolder<BaseMultiItem
             timeTextView.setVisibility(View.GONE);
             return;
         }
-
         String text = TimeUtil.getTimeShowString(message.getTime(), false);
         timeTextView.setText(text);
     }
@@ -267,7 +297,6 @@ public abstract class MsgViewHolderBase extends RecyclerViewHolder<BaseMultiItem
             show.setVisibility(View.VISIBLE);
             show.loadBuddyAvatar(message);
         }
-
     }
 
     private void setOnClickListener() {
@@ -310,19 +339,28 @@ public abstract class MsgViewHolderBase extends RecyclerViewHolder<BaseMultiItem
                 }
             });
         }
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                CommonUtil.onForwardListener listener = CommonUtil.forwardListener;
+                if (listener != null) {
+                    listener.onForward(message, isChecked);
+                }
+            }
+        });
     }
 
     /**
      * item长按事件监听
      */
-    private void setLongClickListener() {
+    private void setLongClickListener(final int position) {
         longClickListener = new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
                 // 优先派发给自己处理，
                 if (!onItemLongClick()) {
                     if (getMsgAdapter().getEventListener() != null) {
-                        getMsgAdapter().getEventListener().onViewHolderLongClick(contentContainer, view, message);
+                        getMsgAdapter().getEventListener().onViewHolderLongClick(contentContainer, view, message, position);
                         return true;
                     }
                 }
@@ -352,7 +390,29 @@ public abstract class MsgViewHolderBase extends RecyclerViewHolder<BaseMultiItem
             return;
         }
         nameTextView.setVisibility(View.VISIBLE);
-        nameTextView.setText(getNameText());
+        if (CommonUtil.role == CommonUtil.SELLER) {
+            Map<String, Object> map = message.getRemoteExtension();
+            if (map != null) {
+                String type = (String) map.get("fromType");
+                if (TextUtils.isEmpty(type)) {
+                    nameTextView.setText(getNameText());
+                    return;
+                }
+                if (type.equals("1")) {
+                    String nickName = (String) map.get("nickName");
+                    if (!TextUtils.isEmpty(nickName)) {
+                        nameTextView.setText(nickName);
+                    } else {
+                        nameTextView.setText(getNameText());
+                    }
+                }
+            } else {
+                nameTextView.setText(getNameText());
+            }
+
+        } else {
+            nameTextView.setText(getNameText());
+        }
     }
 
 
@@ -367,7 +427,6 @@ public abstract class MsgViewHolderBase extends RecyclerViewHolder<BaseMultiItem
         if (!isShowBubble() && !isMiddleItem()) {
             return;
         }
-
         LinearLayout bodyContainer = (LinearLayout) view.findViewById(R.id.message_item_body);
 
         // 调整container的位置

@@ -1,7 +1,7 @@
 package com.netease.nim.avchatkit.common.recyclerview.util;
 
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.SimpleItemAnimator;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SimpleItemAnimator;
 
 /**
  * Created by hzxuwen on 2017/1/13.

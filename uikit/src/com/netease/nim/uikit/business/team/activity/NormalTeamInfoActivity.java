@@ -2,9 +2,11 @@ package com.netease.nim.uikit.business.team.activity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -245,7 +247,7 @@ public class NormalTeamInfoActivity extends UI implements OnClickListener, TAdap
             // 标记创建者（群主）
             if (member.getType() == TeamMemberType.Owner) {
                 creator = member.getAccount();
-                if (creator.equals(NimUIKit.getAccount())) {
+                if (creator.equals(NimUIKit.getAccount().toLowerCase())) {
                     isSelfAdmin = true;
                 }
             }
@@ -260,7 +262,7 @@ public class NormalTeamInfoActivity extends UI implements OnClickListener, TAdap
 
     private void initToggleBtn() {
         toggleLayout = findView(R.id.toggle_layout);
-        noticeBtn = addToggleItemView(KEY_MSG_NOTICE, R.string.team_notification_config, true);
+    //    noticeBtn = addToggleItemView(KEY_MSG_NOTICE, R.string.team_notification_config, true);
     }
 
     private void setToggleBtn(Team team) {
@@ -269,7 +271,7 @@ public class NormalTeamInfoActivity extends UI implements OnClickListener, TAdap
         }
     }
 
-    private SwitchButton addToggleItemView(String key, int titleResId, boolean initState) {
+   /* private SwitchButton addToggleItemView(String key, int titleResId, boolean initState) {
         ViewGroup vp = (ViewGroup) getLayoutInflater().inflate(R.layout.nim_user_profile_toggle_item, null);
         ViewGroup.LayoutParams vlp = new ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, (int) getResources().getDimension(R.dimen.isetting_item_height));
@@ -286,7 +288,7 @@ public class NormalTeamInfoActivity extends UI implements OnClickListener, TAdap
         toggleLayout.addView(vp);
 
         return switchButton;
-    }
+    }*/
 
     private SwitchButton.OnChangedListener onChangedListener = new SwitchButton.OnChangedListener() {
         @Override
@@ -647,7 +649,23 @@ public class NormalTeamInfoActivity extends UI implements OnClickListener, TAdap
     public void onClick(View v) {
         int i = v.getId();
         if (i == R.id.quit_team) {
-            quitTeam();
+            final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("提示");
+            builder.setMessage("您确定要退出讨论组吗？");
+            builder.setNegativeButton("我再看看", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+            builder.setPositiveButton("确定退出", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    quitTeam();
+                }
+            });
+            builder.show();
+
 
         } else if (i == R.id.settings_item_name) {
             TeamPropertySettingActivity.start(NormalTeamInfoActivity.this, teamId, TeamFieldEnum.Name, teamNameTextView.getText().toString(), REQUEST_CODE_NAME);

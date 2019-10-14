@@ -3,37 +3,34 @@ package com.netease.nim.uikit.common.ui.imageview;
 import android.content.Context;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.Log;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.netease.nim.uikit.R;
 import com.netease.nim.uikit.api.NimUIKit;
-import com.netease.nimlib.sdk.NIMClient;
-import com.netease.nimlib.sdk.RequestCallbackWrapper;
+import com.netease.nim.uikit.common.CommonUtil;
 import com.netease.nimlib.sdk.msg.constant.MsgTypeEnum;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
-import com.netease.nimlib.sdk.nos.NosService;
 import com.netease.nimlib.sdk.nos.model.NosThumbParam;
 import com.netease.nimlib.sdk.nos.util.NosThumbImageUtil;
 import com.netease.nimlib.sdk.robot.model.RobotAttachment;
-import com.netease.nimlib.sdk.superteam.SuperTeam;
 import com.netease.nimlib.sdk.team.model.Team;
+import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
 import com.netease.nimlib.sdk.uinfo.model.UserInfo;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.Map;
 
 /**
  * Created by huangjun on 2015/11/13.
  */
 public class HeadImageView extends CircleImageView {
 
-    public static final int DEFAULT_AVATAR_THUMB_SIZE = (int) NimUIKit.getContext().getResources()
-                                                                      .getDimension(
-                                                                              R.dimen.avatar_max_size);
-
-    public static final int DEFAULT_AVATAR_NOTIFICATION_ICON_SIZE = (int) NimUIKit.getContext()
-                                                                                  .getResources()
-                                                                                  .getDimension(
-                                                                                          R.dimen.avatar_notification_size);
-
+    public static final int DEFAULT_AVATAR_THUMB_SIZE = (int) NimUIKit.getContext().getResources().getDimension(R.dimen.avatar_max_size);
+    public static final int DEFAULT_AVATAR_NOTIFICATION_ICON_SIZE = (int) NimUIKit.getContext().getResources().getDimension(R.dimen.avatar_notification_size);
     private static final int DEFAULT_AVATAR_RES_ID = R.drawable.nim_avatar_default;
 
     public HeadImageView(Context context) {
@@ -54,16 +51,7 @@ public class HeadImageView extends CircleImageView {
      * @param url 头像地址
      */
     public void loadAvatar(final String url) {
-        changeUrlBeforeLoad(null, url, DEFAULT_AVATAR_RES_ID, DEFAULT_AVATAR_THUMB_SIZE);
-    }
-
-    /**
-     * 加载用户头像（默认大小的缩略图）
-     *
-     * @param url 头像地址
-     */
-    public void loadAvatar(String roomId, final String url) {
-        changeUrlBeforeLoad(roomId, url, DEFAULT_AVATAR_RES_ID, DEFAULT_AVATAR_THUMB_SIZE);
+        doLoadImage(url, DEFAULT_AVATAR_RES_ID, DEFAULT_AVATAR_THUMB_SIZE);
     }
 
     /**
@@ -73,9 +61,9 @@ public class HeadImageView extends CircleImageView {
      */
     public void loadBuddyAvatar(String account) {
         final UserInfo userInfo = NimUIKit.getUserInfoProvider().getUserInfo(account);
-        changeUrlBeforeLoad(null, userInfo != null ? userInfo.getAvatar() : null,
-                            DEFAULT_AVATAR_RES_ID, DEFAULT_AVATAR_THUMB_SIZE);
+        doLoadImage(userInfo != null ? userInfo.getAvatar() : null, DEFAULT_AVATAR_RES_ID, DEFAULT_AVATAR_THUMB_SIZE);
     }
+
 
     /**
      * 加载用户头像（默认大小的缩略图）
@@ -90,7 +78,30 @@ public class HeadImageView extends CircleImageView {
                 account = attachment.getFromRobotAccount();
             }
         }
-        loadBuddyAvatar(account);
+        if (CommonUtil.role == CommonUtil.SELLER) {
+            Map<String, Object> map = message.getRemoteExtension();
+            if (map != null) {
+                String type = (String) map.get("fromType");
+                if (TextUtils.isEmpty(type)) {
+                    loadBuddyAvatar(account);
+                    return;
+                }
+                if (type.equals("1")) {
+                    String url = (String) map.get("headImgUrl");
+                    if (!TextUtils.isEmpty(url)) {
+                        doLoadImage(url, DEFAULT_AVATAR_RES_ID, DEFAULT_AVATAR_THUMB_SIZE);
+                    } else {
+                        loadBuddyAvatar(account);
+                    }
+                } else {
+                    loadBuddyAvatar(account);
+                }
+            } else {
+                loadBuddyAvatar(account);
+            }
+        } else {
+            loadBuddyAvatar(account);
+        }
     }
 
     /**
@@ -99,59 +110,33 @@ public class HeadImageView extends CircleImageView {
      * @param team 群
      */
     public void loadTeamIconByTeam(final Team team) {
-        changeUrlBeforeLoad(null, team != null ? team.getIcon() : null, R.drawable.nim_avatar_group,
-                            DEFAULT_AVATAR_THUMB_SIZE);
-    }
-
-    /**
-     * 加载群头像（默认大小的缩略图）
-     *
-     * @param team 群
-     */
-    public void loadSuperTeamIconByTeam(final SuperTeam team) {
-        changeUrlBeforeLoad(null, team != null ? team.getIcon() : null, R.drawable.nim_avatar_group,
-                            DEFAULT_AVATAR_THUMB_SIZE);
-    }
-
-
-    /**
-     * 如果图片是上传到云信服务器，并且用户开启了文件安全功能，那么这里可能是短链，需要先换成源链才能下载。
-     * 如果没有使用云信存储或没开启文件安全，那么不用这样做
-     */
-    private void changeUrlBeforeLoad(String roomId, final String url, final int defaultResId,
-                                     final int thumbSize) {
-        if (TextUtils.isEmpty(url)) {
-            // avoid useless call
-            loadImage(url, defaultResId, thumbSize);
-        } else {
-            /*
-             * 若使用网易云信云存储，这里可以设置下载图片的压缩尺寸，生成下载URL
-             * 如果图片来源是非网易云信云存储，请不要使用NosThumbImageUtil
-             */
-            NIMClient.getService(NosService.class).getOriginUrlFromShortUrl(url).setCallback(
-                    new RequestCallbackWrapper<String>() {
-
-                        @Override
-                        public void onResult(int code, String result, Throwable exception) {
-                            if (TextUtils.isEmpty(result)) {
-                                result = url;
-                            }
-                            final String thumbUrl = makeAvatarThumbNosUrl(result, thumbSize);
-                            loadImage(thumbUrl, defaultResId, thumbSize);
-                        }
-                    });
-        }
+        doLoadImage(team != null ? team.getIcon() : null, R.drawable.nim_avatar_group, DEFAULT_AVATAR_THUMB_SIZE);
     }
 
     /**
      * ImageLoader异步加载
      */
-    private void loadImage(final String url, final int defaultResId, final int thumbSize) {
-        RequestOptions requestOptions = new RequestOptions().centerCrop().placeholder(defaultResId)
-                                                            .error(defaultResId).override(thumbSize,
-                                                                                          thumbSize);
-        Glide.with(getContext().getApplicationContext()).asBitmap().load(url).apply(requestOptions)
-             .into(this);
+    private void doLoadImage(final String url, final int defaultResId, final int thumbSize) {
+        /*
+         * 若使用网易云信云存储，这里可以设置下载图片的压缩尺寸，生成下载URL
+         * 如果图片来源是非网易云信云存储，请不要使用NosThumbImageUtil
+         */
+        /*String dealUrl = "";
+        if (!TextUtils.isEmpty(url)) {
+            dealUrl = url.substring(0,4).equals("http") ? url: CommonUtil.getAvatarUrl(url);
+        }*/
+        final String thumbUrl = makeAvatarThumbNosUrl(CommonUtil.getAvatarUrl(url), thumbSize);
+        RequestOptions requestOptions = new RequestOptions()
+                .centerCrop()
+                .placeholder(defaultResId)
+                .error(defaultResId)
+                .override(thumbSize, thumbSize);
+        Glide.with(getContext().getApplicationContext()).asBitmap()
+                .load(thumbUrl)
+                .apply(requestOptions)
+                .into(this);
+        if (thumbUrl != null) {
+        }
     }
 
     /**
@@ -168,9 +153,8 @@ public class HeadImageView extends CircleImageView {
         if (TextUtils.isEmpty(url)) {
             return url;
         }
-        return thumbSize > 0 ? NosThumbImageUtil.makeImageThumbUrl(url,
-                                                                   NosThumbParam.ThumbType.Crop,
-                                                                   thumbSize, thumbSize) : url;
+
+        return thumbSize > 0 ? NosThumbImageUtil.makeImageThumbUrl(url, NosThumbParam.ThumbType.Crop, thumbSize, thumbSize) : url;
     }
 
     public static String getAvatarCacheKey(final String url) {

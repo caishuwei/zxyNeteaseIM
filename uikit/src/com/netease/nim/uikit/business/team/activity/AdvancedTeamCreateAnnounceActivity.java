@@ -8,7 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import com.netease.nim.uikit.common.ToastHelper;
+import android.widget.Toast;
 
 import com.netease.nim.uikit.R;
 import com.netease.nim.uikit.api.NimUIKit;
@@ -18,6 +18,7 @@ import com.netease.nim.uikit.business.team.helper.AnnouncementHelper;
 import com.netease.nim.uikit.common.activity.ToolBarOptions;
 import com.netease.nim.uikit.common.activity.UI;
 import com.netease.nim.uikit.common.ui.dialog.DialogMaker;
+import com.netease.nim.uikit.common.ui.widget.MyToolbar;
 import com.netease.nim.uikit.common.util.sys.NetworkUtil;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.RequestCallback;
@@ -76,24 +77,32 @@ public class AdvancedTeamCreateAnnounceActivity extends UI {
     }
 
     private void initActionbar() {
-        toolbarView = findView(R.id.action_bar_right_clickable_textview);
+        MyToolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setMenuText(getResources().getString(R.string.save));
+      /*  toolbarView = findView(R.id.action_bar_right_clickable_textview);
         toolbarView.setText(R.string.save);
         toolbarView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 requestAnnounceData();
             }
-        });
+        });*/
+    }
+
+    @Override
+    public void menuItemClick(View v) {
+        super.menuItemClick(v);
+        requestAnnounceData();
     }
 
     private void requestAnnounceData() {
         if (!NetworkUtil.isNetAvailable(this)) {
-            ToastHelper.showToast(this, R.string.network_is_not_available);
+            Toast.makeText(this, R.string.network_is_not_available, Toast.LENGTH_LONG).show();
             return;
         }
 
         if (TextUtils.isEmpty(teamAnnounceTitle.getText().toString())) {
-            ToastHelper.showToast(AdvancedTeamCreateAnnounceActivity.this, R.string.team_announce_notice);
+            Toast.makeText(AdvancedTeamCreateAnnounceActivity.this, R.string.team_announce_notice, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -125,7 +134,7 @@ public class AdvancedTeamCreateAnnounceActivity extends UI {
      */
     private void updateTeamData(Team team) {
         if (team == null) {
-            ToastHelper.showToast(this, getString(R.string.team_not_exist));
+            Toast.makeText(this, getString(R.string.team_not_exist), Toast.LENGTH_SHORT).show();
             showKeyboard(false);
             finish();
         } else {
@@ -146,14 +155,14 @@ public class AdvancedTeamCreateAnnounceActivity extends UI {
                 setResult(Activity.RESULT_OK);
                 showKeyboard(false);
                 finish();
-                ToastHelper.showToast(AdvancedTeamCreateAnnounceActivity.this, R.string.update_success);
+                Toast.makeText(AdvancedTeamCreateAnnounceActivity.this, R.string.update_success, Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onFailed(int code) {
                 DialogMaker.dismissProgressDialog();
                 toolbarView.setEnabled(true);
-                ToastHelper.showToast(AdvancedTeamCreateAnnounceActivity.this, String.format(getString(R.string.update_failed), code));
+                Toast.makeText(AdvancedTeamCreateAnnounceActivity.this, String.format(getString(R.string.update_failed), code), Toast.LENGTH_SHORT).show();
             }
 
             @Override

@@ -5,12 +5,12 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.widget.Toast;
 
 import com.netease.nim.uikit.R;
 import com.netease.nim.uikit.business.session.constant.Extras;
-import com.netease.nim.uikit.common.ToastHelper;
-import com.netease.nim.uikit.common.media.imagepicker.Constants;
-import com.netease.nim.uikit.common.media.model.GLImage;
+import com.netease.nim.uikit.common.media.picker.model.PhotoInfo;
+import com.netease.nim.uikit.common.media.picker.model.PickerContract;
 import com.netease.nim.uikit.common.util.file.AttachmentStore;
 import com.netease.nim.uikit.common.util.file.FileUtil;
 import com.netease.nim.uikit.common.util.media.ImageUtil;
@@ -20,6 +20,7 @@ import com.netease.nim.uikit.common.util.string.MD5;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 public class SendImageHelper {
     public interface Callback {
@@ -64,15 +65,15 @@ public class SendImageHelper {
     }
 
     public static void sendImageAfterSelfImagePicker(Context context, Intent data, final Callback callback) {
-        boolean isOrig = data.getBooleanExtra(Extras.EXTRA_IS_ORIGINAL, false);
+        boolean isOrig = true;
 
-        ArrayList<GLImage> images = (ArrayList<GLImage>) data.getSerializableExtra(Constants.EXTRA_RESULT_ITEMS);
-        if (images == null) {
-            ToastHelper.showToastLong(context, R.string.picker_image_error);
+        List<PhotoInfo> photos = PickerContract.getPhotos(data);
+        if (photos == null) {
+            Toast.makeText(context, R.string.picker_image_error, Toast.LENGTH_LONG).show();
             return;
         }
 
-        for (GLImage photoInfo : images) {
+        for (PhotoInfo photoInfo : photos) {
             new SendImageTask(context, isOrig, photoInfo, new Callback() {
 
                 @Override
@@ -90,12 +91,12 @@ public class SendImageHelper {
 
         private Context context;
         private boolean isOrig;
-        private GLImage info;
+        private PhotoInfo info;
         private Callback callback;
 
-        public SendImageTask(Context context, boolean isOrig, GLImage info, Callback callback) {
+        public SendImageTask(Context context, boolean isOrig, PhotoInfo info, Callback callback) {
             this.context = context;
-            this.isOrig = isOrig;
+            this.isOrig = true;
             this.info = info;
             this.callback = callback;
         }
@@ -107,7 +108,7 @@ public class SendImageHelper {
 
         @Override
         protected File doInBackground(Void... params) {
-            String photoPath = info.getPath();
+            String photoPath = info.getAbsolutePath();
             if (TextUtils.isEmpty(photoPath)) {
                 return null;
             }
@@ -134,7 +135,7 @@ public class SendImageHelper {
                     new Handler(context.getMainLooper()).post(new Runnable() {
                         @Override
                         public void run() {
-                            ToastHelper.showToastLong(context, R.string.picker_image_error);
+                            Toast.makeText(context, R.string.picker_image_error, Toast.LENGTH_LONG).show();
                         }
                     });
                     return null;

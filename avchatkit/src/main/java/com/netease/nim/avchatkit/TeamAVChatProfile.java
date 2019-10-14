@@ -1,5 +1,6 @@
 package com.netease.nim.avchatkit;
 
+import android.util.Log;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONArray;
@@ -63,7 +64,7 @@ public class TeamAVChatProfile {
 
     private boolean isTeamAVChatInvite(JSONObject json) {
         if (json != null) {
-            int id = json.getIntValue(KEY_ID);
+            int id = json.getInteger(KEY_ID);
             return id == ID;
         }
         return false;
@@ -92,77 +93,96 @@ public class TeamAVChatProfile {
                             accounts.add((String) o);
                         }
                     }
+                    final List<String> studList = new ArrayList<>();
+                    final List<String> teacList = new ArrayList<>();
+                    for (int i = 0; i < accounts.size(); i++) {
+                        if (accounts.get(i).toLowerCase().startsWith("stud")) {
+                            studList.add(accounts.get(i));
+                        } else if (accounts.get(i).toLowerCase().startsWith("teac")) {
+                            teacList.add(accounts.get(i));
+                        }
+                    }
 
-                    // 接收到群视频邀请，启动来点界面
-                    LogUtil.ui("receive team video chat notification " + teamId + " room " + roomName);
-                    if (isTeamAVChatting || AVChatProfile.getInstance().isAVChatting()) {
-                        LogUtil.ui("cancel launch team av chat isTeamAVChatting = " + isTeamAVChatting);
-                        Toast.makeText(AVChatKit.getContext(), "正在进行视频通话", Toast.LENGTH_SHORT).show();
-                        return;
+                        // 接收到群视频邀请，启动来点界面
+                        LogUtil.ui("receive team video chat notification " + teamId + " room " + roomName);
+                        if (isTeamAVChatting || AVChatProfile.getInstance().isAVChatting()) {
+                            LogUtil.ui("cancel launch team av chat isTeamAVChatting = " + isTeamAVChatting);
+                       //     Toast.makeText(AVChatKit.getContext(), "正在进行视频通话", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+                        LogUtil.ui("isSyncComplete = " + isSyncComplete);
+                        LogUtil.e("account",AVChatKit.getAccount());
+                        if (isSyncComplete || !checkOfflineOutTime(customNotification)) {
+                            isTeamAVChatting = true;
+                            launchActivity(teamId, roomName, studList,teacList, teamName);
+                        }
                     }
-                    LogUtil.ui("isSyncComplete = " + isSyncComplete);
-                    if (isSyncComplete || !checkOfflineOutTime(customNotification)) {
-                        isTeamAVChatting = true;
-                        launchActivity(teamId, roomName, accounts, teamName);
-                    }
+                } catch(Exception e){
+                    e.printStackTrace();
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
             }
         }
-    };
+
+        ;
 
 
-    private void launchActivity(final String teamId, final String roomName, final ArrayList<String> accounts, final String teamName) {
-        Runnable r = new Runnable() {
-            @Override
-            public void run() {
-                // 欢迎界面正在运行，则等MainActivity启动之后再启动，否则直接启动 TeamAVChatActivity
-                if (!AVChatKit.isMainTaskLaunching()) {
-                    TeamAVChatActivity.startActivity(AVChatKit.getContext(), true, teamId, roomName, accounts, teamName);
-                } else {
-                    LogUtil.ui("launch TeamAVChatActivity delay for WelComeActivity is Launching");
-                    launchActivity(teamId, roomName, accounts, teamName);
+        private void launchActivity(final String teamId, final String roomName, final List<String> studList,final List<String> teacList,final String teamName) {
+            Runnable r = new Runnable() {
+                @Override
+                public void run() {
+                    // 欢迎界面正在运行，则等MainActivity启动之后再启动，否则直接启动 TeamAVChatActivity
+                    if (!AVChatKit.isMainTaskLaunching()) {
+                        Integer role = 0;
+                        Log.e("account",AVChatKit.getAccount());
+                        if (AVChatKit.getAccount().toLowerCase().startsWith("stud")) {
+                            role = 2;  //学生
+                        } else{
+                            role = 1; //老师
+                        }
+                        TeamAVChatActivity.startActivity(AVChatKit.getContext(), true, teamId, roomName, studList,teacList, teamName,role);
+                    } else {
+                        LogUtil.ui("launch TeamAVChatActivity delay for WelComeActivity is Launching");
+                        launchActivity(teamId, roomName, studList,teacList, teamName);
+                    }
                 }
+            };
+
+            Handlers.sharedHandler(AVChatKit.getContext()).postDelayed(r, 200);
+        }
+
+        private Observer<LoginSyncStatus> loginSyncStatusObserver = new Observer<LoginSyncStatus>() {
+            @Override
+            public void onEvent(LoginSyncStatus loginSyncStatus) {
+                isSyncComplete = (loginSyncStatus == LoginSyncStatus.SYNC_COMPLETED ||
+                        loginSyncStatus == LoginSyncStatus.NO_BEGIN);
             }
         };
 
-        Handlers.sharedHandler(AVChatKit.getContext()).postDelayed(r, 200);
-    }
-
-    private Observer<LoginSyncStatus> loginSyncStatusObserver = new Observer<LoginSyncStatus>() {
-        @Override
-        public void onEvent(LoginSyncStatus loginSyncStatus) {
-            isSyncComplete = (loginSyncStatus == LoginSyncStatus.SYNC_COMPLETED ||
-                    loginSyncStatus == LoginSyncStatus.NO_BEGIN);
+        public boolean checkOfflineOutTime(CustomNotification notification) {
+            // 时间差在45s内，考虑本地时间误差，条件适当放宽
+            long time = TimeUtil.currentTimeMillis() - notification.getTime();
+            LogUtil.ui("rev offline team AVChat request time = " + time);
+            return time > OFFLINE_EXPIRY || time < -OFFLINE_EXPIRY;
         }
-    };
 
-    public boolean checkOfflineOutTime(CustomNotification notification) {
-        // 时间差在45s内，考虑本地时间误差，条件适当放宽
-        long time = TimeUtil.currentTimeMillis() - notification.getTime();
-        LogUtil.ui("rev offline team AVChat request time = " + time);
-        return time > OFFLINE_EXPIRY || time < -OFFLINE_EXPIRY;
-    }
+        public void setTeamAVChatting(boolean teamAVChatting) {
+            isTeamAVChatting = teamAVChatting;
+        }
 
-    public void setTeamAVChatting(boolean teamAVChatting) {
-        isTeamAVChatting = teamAVChatting;
-    }
+        public boolean isTeamAVChatting() {
+            return isTeamAVChatting;
+        }
 
-    public boolean isTeamAVChatting() {
-        return isTeamAVChatting;
-    }
+        public void registerObserver(boolean register) {
+            NIMClient.getService(AuthServiceObserver.class).observeLoginSyncDataStatus(loginSyncStatusObserver, register);
+            NIMClient.getService(MsgServiceObserve.class).observeCustomNotification(customNotificationObserver, register);
+        }
 
-    public void registerObserver(boolean register) {
-        NIMClient.getService(AuthServiceObserver.class).observeLoginSyncDataStatus(loginSyncStatusObserver, register);
-        NIMClient.getService(MsgServiceObserve.class).observeCustomNotification(customNotificationObserver, register);
-    }
+        public static TeamAVChatProfile sharedInstance() {
+            return InstanceHolder.teamAVChatProfile;
+        }
 
-    public static TeamAVChatProfile sharedInstance() {
-        return InstanceHolder.teamAVChatProfile;
+        private static class InstanceHolder {
+            private final static TeamAVChatProfile teamAVChatProfile = new TeamAVChatProfile();
+        }
     }
-
-    private static class InstanceHolder {
-        private final static TeamAVChatProfile teamAVChatProfile = new TeamAVChatProfile();
-    }
-}

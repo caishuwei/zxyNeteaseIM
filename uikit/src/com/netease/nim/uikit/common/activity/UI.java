@@ -1,21 +1,25 @@
 package com.netease.nim.uikit.common.activity;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 
+import com.netease.nim.uikit.R;
 import com.netease.nim.uikit.common.fragment.TFragment;
+import com.netease.nim.uikit.common.ui.widget.MyToolbar;
 import com.netease.nim.uikit.common.util.log.LogUtil;
 import com.netease.nim.uikit.common.util.sys.ReflectionUtil;
 
@@ -28,7 +32,7 @@ public abstract class UI extends AppCompatActivity {
 
     private static Handler handler;
 
-    private Toolbar toolbar;
+    private MyToolbar toolbar;
 
     @Override
     protected void onStart() {
@@ -37,8 +41,18 @@ public abstract class UI extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setStatusBarMode(this,true);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         LogUtil.ui("activity: " + getClass().getSimpleName() + " onCreate()");
+    }
+
+
+    public void showBaseTopbar(Activity activity, int rBarId, boolean isShow) {
+        View baseTopbar = activity.findViewById(rBarId);
+        if(baseTopbar != null) {
+            baseTopbar.setVisibility(isShow ? View.VISIBLE : View.GONE);
+        }
     }
 
     @Override
@@ -76,7 +90,12 @@ public abstract class UI extends AppCompatActivity {
     }
 
     public void setToolBar(int toolBarId, ToolBarOptions options) {
-        toolbar = findViewById(toolBarId);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            showBaseTopbar(this, R.id.baseTopbar, true);
+        }
+        toolbar = (MyToolbar) findViewById(toolBarId);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.black));
         if (options.titleId != 0) {
             toolbar.setTitle(options.titleId);
         }
@@ -84,26 +103,46 @@ public abstract class UI extends AppCompatActivity {
             toolbar.setTitle(options.titleString);
         }
         if (options.logoId != 0) {
-            toolbar.setLogo(options.logoId);
+//            toolbar.setLogo(options.logoId);
         }
         setSupportActionBar(toolbar);
 
         if (options.isNeedNavigate) {
             toolbar.setNavigationIcon(options.navigateId);
             toolbar.setContentInsetStartWithNavigation(0);
-            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+        /*    toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     onNavigateUpClicked();
+                }
+            });*/
+            ((MyToolbar) toolbar).setOnOptionItemClickListener(new MyToolbar.OnOptionItemClickListener() {
+                @Override
+                public void onOptionItemClick(View v) {
+                    int i = v.getId();
+                    if (i == R.id.back) {
+                        onNavigateUpClicked();
+                    } else {
+                        menuItemClick(v);
+                    }
                 }
             });
         }
     }
 
+
+    /**
+     * toobar 其他View点击事件
+     * @param v
+     */
+    public void menuItemClick(View v){
+
+    }
     public void setToolBar(int toolbarId, int titleId, int logoId) {
-        toolbar = findViewById(toolbarId);
+        toolbar = (MyToolbar) findViewById(toolbarId);
         toolbar.setTitle(titleId);
-        toolbar.setLogo(logoId);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.black));
+//        toolbar.setLogo(logoId);
         setSupportActionBar(toolbar);
     }
 
@@ -125,6 +164,7 @@ public abstract class UI extends AppCompatActivity {
 
     @Override
     public void setTitle(CharSequence title) {
+        toolbar.setTitleTextColor(getResources().getColor(R.color.black));
         super.setTitle(title);
         if (toolbar != null) {
             toolbar.setTitle(title);
@@ -132,6 +172,7 @@ public abstract class UI extends AppCompatActivity {
     }
 
     public void setSubTitle(String subTitle) {
+        toolbar.setTitleTextColor(getResources().getColor(R.color.black));
         if (toolbar != null) {
             toolbar.setSubtitle(subTitle);
         }
@@ -198,7 +239,7 @@ public abstract class UI extends AppCompatActivity {
      * fragment management
      */
     public TFragment addFragment(TFragment fragment) {
-        List<TFragment> fragments = new ArrayList<>(1);
+        List<TFragment> fragments = new ArrayList<TFragment>(1);
         fragments.add(fragment);
 
         List<TFragment> fragments2 = addFragments(fragments);
@@ -206,7 +247,7 @@ public abstract class UI extends AppCompatActivity {
     }
 
     public List<TFragment> addFragments(List<TFragment> fragments) {
-        List<TFragment> fragments2 = new ArrayList<>(fragments.size());
+        List<TFragment> fragments2 = new ArrayList<TFragment>(fragments.size());
 
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
@@ -303,4 +344,22 @@ public abstract class UI extends AppCompatActivity {
         return (T) (findViewById(resId));
     }
 
+    /**
+     * 状态栏字体
+     * @param activity
+     * @param bDark
+     */
+    public static void setStatusBarMode(Activity activity, boolean bDark) {
+        //6.0以上
+        View decorView = activity.getWindow().getDecorView();
+        if (decorView != null) {
+            int vis = decorView.getSystemUiVisibility();
+            if (bDark) {
+                vis |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+            } else {
+                vis &= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+            }
+            decorView.setSystemUiVisibility(vis);
+        }
+    }
 }

@@ -8,7 +8,6 @@ import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
 
 import java.io.Serializable;
-import java.lang.ref.WeakReference;
 
 /**
  * Action基类。<br>
@@ -22,10 +21,8 @@ public abstract class BaseAction implements Serializable {
     private int titleId;
 
     private transient int index;
-
-    // Container持有activity ， 防止内存泄露
-    private transient WeakReference<Container> containerRef;
-
+    private transient Container container;
+    public static String sessionId;
     /**
      * 构造函数
      *
@@ -38,15 +35,15 @@ public abstract class BaseAction implements Serializable {
     }
 
     public Activity getActivity() {
-        return getContainer().activity;
+        return container.activity;
     }
 
     public String getAccount() {
-        return getContainer().account;
+        return container.account;
     }
 
     public SessionTypeEnum getSessionType() {
-        return getContainer().sessionType;
+        return container.sessionType;
     }
 
     public int getIconResId() {
@@ -58,10 +55,6 @@ public abstract class BaseAction implements Serializable {
     }
 
     public Container getContainer() {
-        Container container = containerRef.get();
-        if (container == null) {
-            throw new RuntimeException("container be recycled by vm ");
-        }
         return container;
     }
 
@@ -72,7 +65,7 @@ public abstract class BaseAction implements Serializable {
     }
 
     protected void sendMessage(IMMessage message) {
-        getContainer().proxy.sendMessage(message);
+        container.proxy.sendMessage(message);
     }
 
     protected int makeRequestCode(int requestCode) {
@@ -83,11 +76,15 @@ public abstract class BaseAction implements Serializable {
     }
 
     public void setContainer(Container container) {
-        this.containerRef = new WeakReference<>(container);
+        this.container = container;
     }
 
     public void setIndex(int index) {
         this.index = index;
+    }
+
+    public static void setSession (String id) {
+        sessionId = id;
     }
 
 }

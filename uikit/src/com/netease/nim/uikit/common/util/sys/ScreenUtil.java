@@ -1,46 +1,47 @@
 package com.netease.nim.uikit.common.util.sys;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Point;
+import android.os.Build;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.WindowManager;
 
 import com.netease.nim.uikit.api.NimUIKit;
 
 import java.lang.reflect.Field;
 
 public class ScreenUtil {
-
     private static final String TAG = "Demo.ScreenUtil";
 
     private static double RATIO = 0.85;
 
     public static int screenWidth;
-
     public static int screenHeight;
-
     public static int screenMin;// 宽高中，小的一边
-
     public static int screenMax;// 宽高中，较大的值
 
     public static float density;
-
     public static float scaleDensity;
-
     public static float xdpi;
-
     public static float ydpi;
-
     public static int densityDpi;
 
     public static int dialogWidth;
-
     public static int statusbarheight;
-
     public static int navbarheight;
 
     static {
         init(NimUIKit.getContext());
+    }
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
+    public static int getScreenWidth(Context context) {
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        Point p = new Point();
+        wm.getDefaultDisplay().getSize(p);
+        return p.x;
     }
 
     public static int dip2px(float dipValue) {
@@ -73,6 +74,7 @@ public class ScreenUtil {
         xdpi = dm.xdpi;
         ydpi = dm.ydpi;
         densityDpi = dm.densityDpi;
+
         Log.d(TAG, "screenWidth=" + screenWidth + " screenHeight=" + screenHeight + " density=" + density);
     }
 

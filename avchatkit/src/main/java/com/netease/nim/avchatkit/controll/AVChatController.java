@@ -24,6 +24,7 @@ import com.netease.nimlib.sdk.avchat.constant.AVChatType;
 import com.netease.nimlib.sdk.avchat.model.AVChatData;
 import com.netease.nimlib.sdk.avchat.model.AVChatNotifyOption;
 import com.netease.nimlib.sdk.avchat.model.AVChatParameters;
+import com.netease.nimlib.sdk.avchat.model.AVChatServerAddresses;
 import com.netease.nimlib.sdk.avchat.video.AVChatCameraCapturer;
 import com.netease.nimlib.sdk.avchat.video.AVChatVideoCapturerFactory;
 
@@ -103,7 +104,7 @@ public class AVChatController {
      */
 
     public void doCalling(String account, final AVChatType avChatType, final AVChatControllerCallback<AVChatData> callback) {
-
+        AVChatServerAddresses serverAddresses = AVPrivatizationConfig.getServerAddresses(context);
         AVChatManager.getInstance().enableRtc(AVPrivatizationConfig.getServerAddresses(context));
         AVChatManager.getInstance().setParameters(avChatConfigs.getAvChatParameters());
         AVChatManager.getInstance().setParameter(AVChatParameters.KEY_VIDEO_FRAME_FILTER, true);

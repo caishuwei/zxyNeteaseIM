@@ -65,17 +65,17 @@ public class SimpleAVChatStateObserver implements AVChatStateObserver {
     }
 
     @Override
-    public void onSubscribeVideoResult(String account, int videoType, int result) {
+    public void onSubscribeVideoResult(String account, int result) {
 
     }
 
     @Override
-    public void onUnsubscribeVideoResult(String account, int videoType, int result) {
+    public void onUnsubscribeVideoResult(String account, int result) {
 
     }
 
     @Override
-    public void onRemotePublishVideo(String account, int[] videoTypes) {
+    public void onRemotePublishVideo(String account) {
 
     }
 

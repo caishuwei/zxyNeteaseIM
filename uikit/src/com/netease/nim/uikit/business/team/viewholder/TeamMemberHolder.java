@@ -8,6 +8,7 @@ import com.netease.nim.uikit.R;
 import com.netease.nim.uikit.api.NimUIKit;
 import com.netease.nim.uikit.business.team.adapter.TeamMemberAdapter;
 import com.netease.nim.uikit.business.team.helper.TeamHelper;
+import com.netease.nim.uikit.common.CommonUtil;
 import com.netease.nim.uikit.common.adapter.TViewHolder;
 import com.netease.nim.uikit.common.ui.imageview.HeadImageView;
 
@@ -73,7 +74,11 @@ public class TeamMemberHolder extends TViewHolder {
                 headImageView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        getAdapter().getAddMemberCallback().onAddMember();
+                      //  getAdapter().getAddMemberCallback().onAddMember();
+                        CommonUtil.AddMemberListener listener= CommonUtil.addMemberListener;
+                        if (listener != null) {
+                            listener.addMember(context);
+                        }
                     }
                 });
             } else if (memberItem.getTag() == TeamMemberAdapter.TeamMemberItemTag.DELETE) {

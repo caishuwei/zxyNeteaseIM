@@ -2,15 +2,15 @@ package com.netease.nim.uikit.business.team.helper;
 
 import android.content.Context;
 import android.text.TextUtils;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.netease.nim.uikit.R;
 import com.netease.nim.uikit.api.NimUIKit;
 import com.netease.nim.uikit.business.contact.core.item.ContactIdFilter;
 import com.netease.nim.uikit.business.contact.selector.activity.ContactSelectActivity;
 import com.netease.nim.uikit.business.uinfo.UserInfoHelper;
-import com.netease.nim.uikit.common.ToastHelper;
-import com.netease.nimlib.sdk.superteam.SuperTeam;
-import com.netease.nimlib.sdk.superteam.SuperTeamMember;
+import com.netease.nim.uikit.common.CommonUtil;
 import com.netease.nimlib.sdk.team.constant.TeamBeInviteModeEnum;
 import com.netease.nimlib.sdk.team.constant.TeamInviteModeEnum;
 import com.netease.nimlib.sdk.team.constant.TeamMemberType;
@@ -20,6 +20,9 @@ import com.netease.nimlib.sdk.team.constant.TeamUpdateModeEnum;
 import com.netease.nimlib.sdk.team.constant.VerifyTypeEnum;
 import com.netease.nimlib.sdk.team.model.Team;
 import com.netease.nimlib.sdk.team.model.TeamMember;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -251,7 +254,7 @@ public class TeamHelper {
                 }
             }
             tipContent.append("所在群组数量达到上限，邀请失败");
-            ToastHelper.showToast(context, tipContent.toString());
+            Toast.makeText(context, tipContent.toString(), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -273,8 +276,27 @@ public class TeamHelper {
 
     public static String getTeamName(String teamId) {
         Team team = NimUIKit.getTeamProvider().getTeamById(teamId);
-        return team == null ? teamId : TextUtils.isEmpty(team.getName()) ? team.getId() : team
-                .getName();
+        if (team == null) {
+            return teamId;
+        }
+        if (CommonUtil.role == CommonUtil.STUD) {
+            return team == null ? teamId : TextUtils.isEmpty(team.getName()) ? team.getId() : team.getName();
+        } else {
+            String result = team.getExtServer();
+            String name = null;
+            try {
+                if (!TextUtils.isEmpty(result)) {
+                    JSONObject jsonObject = new JSONObject(result);
+                    name = jsonObject.optString("orderNo");
+                } else {
+                    return team.getName();
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+                return team.getName();
+            }
+            return TextUtils.isEmpty(name) ? team.getName() : name;
+        }
     }
 
     /**
@@ -290,21 +312,6 @@ public class TeamHelper {
         }
 
         return getDisplayNameWithoutMe(tid, account);
-    }
-
-    /**
-     * 获取显示名称。用户本人显示“我”
-     *
-     * @param tid
-     * @param account
-     * @return
-     */
-    public static String getSuperTeamMemberDisplayName(String tid, String account) {
-        if (account.equals(NimUIKit.getAccount())) {
-            return "我";
-        }
-
-        return getSuperDisplayNameWithoutMe(tid, account);
     }
 
     /**
@@ -341,41 +348,10 @@ public class TeamHelper {
         return UserInfoHelper.getUserName(account);
     }
 
-    /**
-     * 获取显示名称。用户本人也显示昵称
-     * 备注>群昵称>昵称
-     */
-    public static String getSuperDisplayNameWithoutMe(String tid, String account) {
-
-        String alias = NimUIKit.getContactProvider().getAlias(account);
-        if (!TextUtils.isEmpty(alias)) {
-            return alias;
-        }
-
-        String memberNick = getSuperTeamNick(tid, account);
-        if (!TextUtils.isEmpty(memberNick)) {
-            return memberNick;
-        }
-
-        return UserInfoHelper.getUserName(account);
-    }
-
-
     public static String getTeamNick(String tid, String account) {
         Team team = NimUIKit.getTeamProvider().getTeamById(tid);
         if (team != null && team.getType() == TeamTypeEnum.Advanced) {
             TeamMember member = NimUIKit.getTeamProvider().getTeamMember(tid, account);
-            if (member != null && !TextUtils.isEmpty(member.getTeamNick())) {
-                return member.getTeamNick();
-            }
-        }
-        return null;
-    }
-
-    public static String getSuperTeamNick(String tid, String account) {
-        SuperTeam team = NimUIKit.getSuperTeamProvider().getTeamById(tid);
-        if (team != null) {
-            SuperTeamMember member = NimUIKit.getSuperTeamProvider().getTeamMember(tid, account);
             if (member != null && !TextUtils.isEmpty(member.getTeamNick())) {
                 return member.getTeamNick();
             }

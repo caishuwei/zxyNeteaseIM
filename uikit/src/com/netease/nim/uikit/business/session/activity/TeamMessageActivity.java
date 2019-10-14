@@ -4,9 +4,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
-import com.netease.nim.uikit.common.ToastHelper;
+import android.widget.Toast;
 
 import com.netease.nim.uikit.R;
 import com.netease.nim.uikit.api.NimUIKit;
@@ -19,14 +21,22 @@ import com.netease.nim.uikit.api.wrapper.NimToolBarOptions;
 import com.netease.nim.uikit.business.session.constant.Extras;
 import com.netease.nim.uikit.business.session.fragment.MessageFragment;
 import com.netease.nim.uikit.business.session.fragment.TeamMessageFragment;
-import com.netease.nim.uikit.common.ToastHelper;
+import com.netease.nim.uikit.business.team.activity.AdvancedTeamInfoActivity;
+import com.netease.nim.uikit.business.team.activity.AdvancedTeamMemberActivity;
+import com.netease.nim.uikit.common.CommonUtil;
 import com.netease.nim.uikit.common.activity.ToolBarOptions;
+import com.netease.nim.uikit.common.ui.widget.MyToolbar;
+import com.netease.nim.uikit.impl.NimUIKitImpl;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
 import com.netease.nimlib.sdk.team.constant.TeamTypeEnum;
 import com.netease.nimlib.sdk.team.model.Team;
 import com.netease.nimlib.sdk.team.model.TeamMember;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.lang.ref.WeakReference;
 import java.util.List;
 
 /**
@@ -36,6 +46,8 @@ import java.util.List;
  */
 public class TeamMessageActivity extends BaseMessageActivity {
 
+    public static WeakReference<TeamMessageActivity> instance;
+    private static final int REQUEST_CODE_MEMBER_LIST = 102;
     // model
     private Team team;
 
@@ -46,7 +58,6 @@ public class TeamMessageActivity extends BaseMessageActivity {
     private TeamMessageFragment fragment;
 
     private Class<? extends Activity> backToClass;
-
     public static void start(Context context, String tid, SessionCustomization customization,
                              Class<? extends Activity> backToClass, IMMessage anchor) {
         Intent intent = new Intent();
@@ -66,14 +77,13 @@ public class TeamMessageActivity extends BaseMessageActivity {
         invalidTeamTipView = findView(R.id.invalid_team_tip);
         invalidTeamTipText = findView(R.id.invalid_team_text);
     }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        instance = new WeakReference<TeamMessageActivity>(this);
         backToClass = (Class<? extends Activity>) getIntent().getSerializableExtra(Extras.EXTRA_BACK_TO_CLASS);
         findViews();
-
         registerTeamUpdateObserver(true);
     }
 
@@ -113,11 +123,11 @@ public class TeamMessageActivity extends BaseMessageActivity {
     }
 
     private void onRequestTeamInfoFailed() {
-        ToastHelper.showToast(TeamMessageActivity.this, "获取群组信息失败!");
+        Toast.makeText(TeamMessageActivity.this, "获取群组信息失败!", Toast.LENGTH_SHORT).show();
         finish();
     }
 
-    /**R
+    /**
      * 更新群信息
      *
      * @param d
@@ -129,9 +139,22 @@ public class TeamMessageActivity extends BaseMessageActivity {
 
         team = d;
         fragment.setTeam(team);
+        if (CommonUtil.role == CommonUtil.STUD) {
+            setTitle(team == null ? sessionId : team.getName() + "(" + team.getMemberCount() + "人)");
+        } else {
+            String result = team.getExtServer();
+            String name = null;
+            try {
+                if (!TextUtils.isEmpty(result)) {
+                    JSONObject jsonObject = new JSONObject(result);
+                    name = jsonObject.getString("orderNo");
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            setTitle(name == null ? d.getName() : name + "(" + team.getMemberCount() + "人)");
 
-        setTitle(team == null ? sessionId : team.getName() + "(" + team.getMemberCount() + "人)");
-
+        }
         invalidTeamTipText.setText(team.getType() == TeamTypeEnum.Normal ? R.string.normal_team_invalid_tip : R.string.team_invalid_tip);
         invalidTeamTipView.setVisibility(team.isMyTeam() ? View.GONE : View.VISIBLE);
     }
@@ -233,6 +256,20 @@ public class TeamMessageActivity extends BaseMessageActivity {
         ToolBarOptions options = new NimToolBarOptions();
         options.titleString = "群聊";
         setToolBar(R.id.toolbar, options);
+        MyToolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setMenuDrawable(R.drawable.nim_ic_message_actionbar_team);
+    }
+
+    @Override
+    public void menuItemClick(View v) {
+        super.menuItemClick(v);
+        //  AdvancedTeamMemberActivity.startActivityForResult(TeamMessageActivity.this, sessionId, REQUEST_CODE_MEMBER_LIST);
+        Team team = NimUIKit.getTeamProvider().getTeamById(sessionId);
+        if (team.getType() == TeamTypeEnum.Normal) {
+            NimUIKitImpl.startTeamInfo(this,sessionId);
+        } else {
+            AdvancedTeamInfoActivity.start(TeamMessageActivity.this, sessionId);
+        }
     }
 
     @Override

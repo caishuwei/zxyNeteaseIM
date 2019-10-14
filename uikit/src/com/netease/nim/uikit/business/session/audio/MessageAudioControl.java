@@ -1,7 +1,7 @@
 package com.netease.nim.uikit.business.session.audio;
 
 import android.content.Context;
-import com.netease.nim.uikit.common.ToastHelper;
+import android.widget.Toast;
 
 import com.netease.nim.uikit.R;
 import com.netease.nim.uikit.api.NimUIKit;
@@ -147,7 +147,7 @@ public class MessageAudioControl extends BaseAudioControl<IMMessage> {
                 }
             }
         } else {
-            ToastHelper.showToast(mContext, R.string.sdcard_not_exist_error);
+            Toast.makeText(mContext, R.string.sdcard_not_exist_error, Toast.LENGTH_SHORT).show();
         }
     }
 

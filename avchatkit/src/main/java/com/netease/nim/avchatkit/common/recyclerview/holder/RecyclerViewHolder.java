@@ -1,6 +1,6 @@
 package com.netease.nim.avchatkit.common.recyclerview.holder;
 
-import androidx.recyclerview.widget.RecyclerView;
+import android.support.v7.widget.RecyclerView;
 
 /**
  * Created by huangjun on 2016/12/11.

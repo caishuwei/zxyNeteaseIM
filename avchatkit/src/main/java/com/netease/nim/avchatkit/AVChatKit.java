@@ -21,6 +21,7 @@ import com.netease.nimlib.sdk.avchat.constant.AVChatControlCommand;
 import com.netease.nimlib.sdk.avchat.model.AVChatData;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 云信音视频组件定制化入口
@@ -157,12 +158,12 @@ public class AVChatKit {
      * @param context   上下文
      * @param receivedCall  是否是接收到的来电
      * @param teamId    team id
-     * @param roomId    音视频通话room id
-     * @param accounts  音视频通话账号集合
+//     * @param roomId    音视频通话room id
+//     * @param accounts  音视频通话账号集合
      * @param teamName  群组名称
      */
-    public static void outgoingTeamCall(Context context, boolean receivedCall, String teamId, String roomId, ArrayList<String> accounts, String teamName) {
-        TeamAVChatActivity.startActivity(context, receivedCall, teamId, roomId, accounts, teamName);
+    public static void outgoingTeamCall(Context context, boolean receivedCall, String teamId, String roomId, List<String> studList, List<String> teacList, String teamName,int role) {
+        TeamAVChatActivity.startActivity(context, receivedCall, teamId, roomId, studList,teacList, teamName,role);
 
     }
 

@@ -1,5 +1,6 @@
 package com.netease.nim.uikit.business.session.viewholder;
 
+import com.netease.nim.uikit.R;
 import com.netease.nimlib.sdk.msg.attachment.AudioAttachment;
 import com.netease.nimlib.sdk.msg.attachment.ImageAttachment;
 import com.netease.nimlib.sdk.msg.attachment.LocationAttachment;
@@ -31,6 +32,7 @@ public class MsgViewHolderFactory {
         register(LocationAttachment.class, MsgViewHolderLocation.class);
         register(NotificationAttachment.class, MsgViewHolderNotification.class);
         register(RobotAttachment.class, MsgViewHolderRobot.class);
+
     }
 
     public static void register(Class<? extends MsgAttachment> attach, Class<? extends MsgViewHolderBase> viewHolder) {

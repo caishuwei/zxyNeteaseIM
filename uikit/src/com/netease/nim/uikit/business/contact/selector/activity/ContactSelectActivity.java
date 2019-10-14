@@ -5,8 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import androidx.core.view.MenuItemCompat;
-import androidx.appcompat.widget.SearchView;
+import android.support.v4.view.MenuItemCompat;
+import android.support.v7.widget.SearchView;
 import android.text.TextUtils;
 import android.util.TypedValue;
 import android.view.MenuItem;
@@ -21,7 +21,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.netease.nim.uikit.common.ToastHelper;
+import android.widget.Toast;
 
 import com.netease.nim.uikit.R;
 import com.netease.nim.uikit.api.wrapper.NimToolBarOptions;
@@ -54,7 +54,7 @@ import java.util.List;
  * <p/>
  * Created by huangjun on 2015/3/3.
  */
-public class ContactSelectActivity extends UI implements View.OnClickListener, androidx.appcompat.widget.SearchView.OnQueryTextListener {
+public class ContactSelectActivity extends UI implements View.OnClickListener, android.support.v7.widget.SearchView.OnQueryTextListener {
 
     public static final String EXTRA_DATA = "EXTRA_DATA"; // 请求数据：Option
     public static final String RESULT_DATA = "RESULT_DATA"; // 返回结果
@@ -396,7 +396,7 @@ public class ContactSelectActivity extends UI implements View.OnClickListener, a
                                 contactSelectedAdapter.addContact(contact);
                             }
                         } else {
-                            ToastHelper.showToast(ContactSelectActivity.this, option.maxSelectedTip);
+                            Toast.makeText(ContactSelectActivity.this, option.maxSelectedTip, Toast.LENGTH_SHORT).show();
                         }
 
                         if (!TextUtils.isEmpty(queryText) && searchView != null) {
@@ -579,9 +579,9 @@ public class ContactSelectActivity extends UI implements View.OnClickListener, a
 
     private boolean showMaxMinSelectTip(boolean min) {
         if (min) {
-            ToastHelper.showToast(this, option.minSelectedTip);
+            Toast.makeText(this, option.minSelectedTip, Toast.LENGTH_SHORT).show();
         } else {
-            ToastHelper.showToast(this, option.maxSelectedTip);
+            Toast.makeText(this, option.maxSelectedTip, Toast.LENGTH_SHORT).show();
         }
         return false;
     }

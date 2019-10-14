@@ -3,17 +3,19 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryDark">@color/color_gray_d9d9d9</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/color_blue_0888ff</item>
         <item name="actionBarSize">@dimen/action_bar_height</item>
         <item name="android:textColorPrimary">@color/black</item>
         <item name="toolbarNavigationButtonStyle">@style/myToolbarNavigationButtonStyle</item>
     </style>
 
-    <style name="AppTheme.NoActionBar">
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:screenOrientation">portrait</item>
+        <!--<item name="android:windowBackground">#ffffff</item>-->
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar">
@@ -48,40 +50,5 @@
         <item name="toolbarNavigationButtonStyle">@style/myToolbarNavigationButtonStyle</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-    </style>
-
-    <style name="LightBaseTheme" parent="Theme.AppCompat.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryDark">@color/white_opacity_80</item>
-        <item name="colorAccent">@color/color_blue_0888ff</item>
-        <item name="actionBarSize">@dimen/action_bar_height</item>
-        <item name="android:textColorPrimary">@color/black</item>
-        <item name="toolbarNavigationButtonStyle">@style/ToolbarNavigationButtonStyle</item>
-    </style>
-    <!-- navigation style -->
-    <style name="ToolbarNavigationButtonStyle" parent="@style/Widget.AppCompat.Toolbar.Button.Navigation">
-        <item name="android:minWidth">0dp</item>
-        <item name="android:paddingRight">10dp</item>
-        <item name="android:paddingLeft">10dp</item>
-    </style>
-
-    <style name="ImagePickerTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:fitsSystemWindows">true</item>
-        <item name="colorAccent">#ff661a</item>
-        <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryDark">@color/white</item>
-    </style>
-
-    <style name="ImagePickerTheme.BlackStatusBar">
-        <item name="android:fitsSystemWindows">false</item>
-        <item name="colorPrimary">@color/black</item>
-        <item name="colorPrimaryDark">@color/black</item>
-    </style>
-
-    <style name="VideoTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:fitsSystemWindows">true</item>
-        <item name="colorAccent">#ff661a</item>
-        <item name="android:windowFullscreen">true</item>
     </style>
 </resources>

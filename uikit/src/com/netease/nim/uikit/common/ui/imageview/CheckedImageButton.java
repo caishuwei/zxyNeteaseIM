@@ -5,13 +5,12 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-
-import androidx.appcompat.widget.AppCompatImageButton;
+import android.widget.ImageButton;
 
 /**
  * 选中图片控件
  */
-public class CheckedImageButton extends AppCompatImageButton {
+public class CheckedImageButton extends ImageButton {
 
     private boolean checked;
 

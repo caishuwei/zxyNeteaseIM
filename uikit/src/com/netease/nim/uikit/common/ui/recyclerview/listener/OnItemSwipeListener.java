@@ -1,7 +1,7 @@
 package com.netease.nim.uikit.common.ui.recyclerview.listener;
 
 import android.graphics.Canvas;
-import androidx.recyclerview.widget.RecyclerView;
+import android.support.v7.widget.RecyclerView;
 
 public interface OnItemSwipeListener {
 

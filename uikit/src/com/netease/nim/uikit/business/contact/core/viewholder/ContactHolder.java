@@ -36,7 +36,6 @@ public class ContactHolder extends AbsContactViewHolder<ContactItem> {
         }
         name.setText(contact.getDisplayName());
         headLayout.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 if (contact.getContactType() == IContact.Type.Friend) {
@@ -46,6 +45,7 @@ public class ContactHolder extends AbsContactViewHolder<ContactItem> {
                 }
             }
         });
+
         // query result
         desc.setVisibility(View.GONE);
         /*
@@ -62,10 +62,12 @@ public class ContactHolder extends AbsContactViewHolder<ContactItem> {
     @Override
     public View inflate(LayoutInflater inflater) {
         View view = inflater.inflate(R.layout.nim_contacts_item, null);
-        headLayout = view.findViewById(R.id.head_layout);
-        head = view.findViewById(R.id.contacts_item_head);
-        name = view.findViewById(R.id.contacts_item_name);
-        desc = view.findViewById(R.id.contacts_item_desc);
+
+        headLayout = (RelativeLayout) view.findViewById(R.id.head_layout);
+        head = (HeadImageView) view.findViewById(R.id.contacts_item_head);
+        name = (TextView) view.findViewById(R.id.contacts_item_name);
+        desc = (TextView) view.findViewById(R.id.contacts_item_desc);
+
         return view;
     }
 }

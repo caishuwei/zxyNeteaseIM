@@ -1,6 +1,6 @@
 package com.netease.nim.uikit.business.ait.selector.adapter;
 
-import androidx.recyclerview.widget.RecyclerView;
+import android.support.v7.widget.RecyclerView;
 
 import com.netease.nim.uikit.R;
 import com.netease.nim.uikit.business.ait.selector.holder.RobotViewHolder;

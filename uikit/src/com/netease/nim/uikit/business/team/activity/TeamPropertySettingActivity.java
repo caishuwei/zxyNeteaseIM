@@ -11,12 +11,13 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.netease.nim.uikit.common.ToastHelper;
+import android.widget.Toast;
 
 import com.netease.nim.uikit.R;
 import com.netease.nim.uikit.api.wrapper.NimToolBarOptions;
 import com.netease.nim.uikit.common.activity.ToolBarOptions;
 import com.netease.nim.uikit.common.activity.UI;
+import com.netease.nim.uikit.common.ui.widget.MyToolbar;
 import com.netease.nim.uikit.common.util.string.StringTextWatcher;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.RequestCallback;
@@ -28,7 +29,7 @@ import com.netease.nimlib.sdk.team.constant.TeamFieldEnum;
  * 群属性
  * Created by hzxuwen on 2015/4/10.
  */
-public class TeamPropertySettingActivity extends UI implements View.OnClickListener {
+public class TeamPropertySettingActivity extends UI {
 
     private static final String EXTRA_TID = "EXTRA_TID";
     public static final String EXTRA_DATA = "EXTRA_DATA";
@@ -89,9 +90,8 @@ public class TeamPropertySettingActivity extends UI implements View.OnClickListe
         findViews();
         parseIntent();
 
-        TextView toolbarView = findView(R.id.action_bar_right_clickable_textview);
-        toolbarView.setText(R.string.save);
-        toolbarView.setOnClickListener(this);
+        MyToolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setMenuText(getResources().getString(R.string.save));
     }
 
     private void parseIntent() {
@@ -164,13 +164,10 @@ public class TeamPropertySettingActivity extends UI implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View v) {
-        int i = v.getId();
-        if (i == R.id.action_bar_right_clickable_textview) {
-            showKeyboard(false);
-            complete();
-        } else {
-        }
+    public void menuItemClick(View v) {
+        super.menuItemClick(v);
+        showKeyboard(false);
+        complete();
     }
 
     /**
@@ -179,13 +176,13 @@ public class TeamPropertySettingActivity extends UI implements View.OnClickListe
     private void complete() {
         if (filed == TeamFieldEnum.Name) {
             if (TextUtils.isEmpty(editText.getText().toString())) {
-                ToastHelper.showToast(this, R.string.not_allow_empty);
+                Toast.makeText(this, R.string.not_allow_empty, Toast.LENGTH_SHORT).show();
             } else {
                 char[] s = editText.getText().toString().toCharArray();
                 int i;
                 for (i = 0; i < s.length; i++) {
                     if (String.valueOf(s[i]).equals(" ")) {
-                        ToastHelper.showToast(this, R.string.now_allow_space);
+                        Toast.makeText(this, R.string.now_allow_space, Toast.LENGTH_SHORT).show();
                         break;
                     }
                 }
@@ -226,17 +223,17 @@ public class TeamPropertySettingActivity extends UI implements View.OnClickListe
             NIMClient.getService(TeamService.class).updateTeam(teamId, filed, editText.getText().toString()).setCallback(new RequestCallback<Void>() {
                 @Override
                 public void onSuccess(Void param) {
-                    ToastHelper.showToast(TeamPropertySettingActivity.this, R.string.update_success);
+                    Toast.makeText(TeamPropertySettingActivity.this, R.string.update_success, Toast.LENGTH_SHORT).show();
                     saved();
                 }
 
                 @Override
                 public void onFailed(int code) {
                     if (code == ResponseCode.RES_TEAM_ENACCESS) {
-                        ToastHelper.showToast(TeamPropertySettingActivity.this, R.string.no_permission);
-
+                        Toast.makeText(TeamPropertySettingActivity.this, R.string.no_permission, Toast.LENGTH_SHORT).show();
                     } else {
-                        ToastHelper.showToast(TeamPropertySettingActivity.this, String.format(getString(R.string.update_failed), code));
+                        Toast.makeText(TeamPropertySettingActivity.this, String.format(getString(R.string.update_failed), code),
+                                Toast.LENGTH_SHORT).show();
                     }
                 }
 

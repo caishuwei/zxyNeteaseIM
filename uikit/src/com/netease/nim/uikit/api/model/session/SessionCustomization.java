@@ -34,6 +34,8 @@ public class SessionCustomization implements Serializable {
 
     /**
      * 加号展开后的action list。
+     * 默认已包含图片，视频和地理位置
+     * TODO 加号展开后的action list。
      */
     public ArrayList<BaseAction> actions;
 

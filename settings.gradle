@@ -1,6 +1,7 @@
-include ':uikit', ':zxy_demo'
-include ':demo' 
-include ':faceunity' 
-include ':jrmfRpWalletlib'
+include ':app'
+include ':imlibrary'
+include ':uikit'
+include ':filepicker'
 include ':avchatkit'
-include ':rtskit'
+include ':faceunity'
+

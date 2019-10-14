@@ -51,10 +51,9 @@ public class LoginSyncDataStatusObserver {
     public void registerLoginSyncDataStatus(boolean register) {
         LogUtil.i(TAG, "observe login sync data completed event on Application create");
         NIMClient.getService(AuthServiceObserver.class).observeLoginSyncDataStatus(loginSyncStatusObserver, register);
-        NIMClient.getService(AuthServiceObserver.class).observeLoginSyncTeamMembersCompleteResult(syncTeamMemberObserver, register);
     }
 
-    private Observer<LoginSyncStatus> loginSyncStatusObserver = new Observer<LoginSyncStatus>() {
+    Observer<LoginSyncStatus> loginSyncStatusObserver = new Observer<LoginSyncStatus>() {
         @Override
         public void onEvent(LoginSyncStatus status) {
             syncStatus = status;
@@ -64,12 +63,6 @@ public class LoginSyncDataStatusObserver {
                 LogUtil.i(TAG, "login sync data completed");
                 onLoginSyncDataCompleted(false);
             }
-        }
-    };
-    private Observer<Boolean> syncTeamMemberObserver = new Observer<Boolean>() {
-        @Override
-        public void onEvent(Boolean result) {
-            LogUtil.i(TAG, "login sync all team members result = " + result);
         }
     };
 
@@ -83,9 +76,9 @@ public class LoginSyncDataStatusObserver {
     public boolean observeSyncDataCompletedEvent(Observer<Void> observer) {
         if (syncStatus == LoginSyncStatus.NO_BEGIN || syncStatus == LoginSyncStatus.SYNC_COMPLETED) {
             /*
-             * NO_BEGIN 如果登录后未开始同步数据，那么可能是自动登录的情况:
-             * PUSH进程已经登录同步数据完成了，此时UI进程启动后并不知道，这里直接视为同步完成
-             */
+            * NO_BEGIN 如果登录后未开始同步数据，那么可能是自动登录的情况:
+            * PUSH进程已经登录同步数据完成了，此时UI进程启动后并不知道，这里直接视为同步完成
+            */
             return true;
         }
 

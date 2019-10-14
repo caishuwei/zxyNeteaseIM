@@ -5,6 +5,7 @@ import android.media.AudioManager;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -15,11 +16,11 @@ import com.netease.nim.uikit.api.model.session.SessionCustomization;
 import com.netease.nim.uikit.business.ait.AitManager;
 import com.netease.nim.uikit.business.session.actions.BaseAction;
 import com.netease.nim.uikit.business.session.actions.ImageAction;
-import com.netease.nim.uikit.business.session.actions.LocationAction;
 import com.netease.nim.uikit.business.session.actions.VideoAction;
 import com.netease.nim.uikit.business.session.constant.Extras;
 import com.netease.nim.uikit.business.session.module.Container;
 import com.netease.nim.uikit.business.session.module.ModuleProxy;
+import com.netease.nim.uikit.business.session.module.forward.ForwardPanel;
 import com.netease.nim.uikit.business.session.module.input.InputPanel;
 import com.netease.nim.uikit.business.session.module.list.MessageListPanelEx;
 import com.netease.nim.uikit.common.CommonUtil;
@@ -44,6 +45,7 @@ import com.netease.nimlib.sdk.robot.model.RobotAttachment;
 import com.netease.nimlib.sdk.robot.model.RobotMsgType;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -60,21 +62,22 @@ public class MessageFragment extends TFragment implements ModuleProxy {
 
     protected static final String TAG = "MessageActivity";
 
-    // p2p对方Account或者群id
-    protected String sessionId;
+    // 聊天对象
+    public String sessionId; // p2p对方Account或者群id
 
     protected SessionTypeEnum sessionType;
 
     // modules
-    protected InputPanel inputPanel;
-    protected MessageListPanelEx messageListPanel;
-
+    public InputPanel inputPanel;
+    public MessageListPanelEx messageListPanel;
+    public ForwardPanel forwardPanel;
     protected AitManager aitManager;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         parseIntent();
+        BaseAction.setSession(sessionId);  //将sessionId传递到排课
     }
 
     @Override
@@ -91,7 +94,8 @@ public class MessageFragment extends TFragment implements ModuleProxy {
     public void onPause() {
         super.onPause();
 
-        NIMClient.getService(MsgService.class).setChattingAccount(MsgService.MSG_CHATTING_ACCOUNT_NONE, SessionTypeEnum.None);
+        NIMClient.getService(MsgService.class).setChattingAccount(MsgService.MSG_CHATTING_ACCOUNT_NONE,
+                SessionTypeEnum.None);
         inputPanel.onPause();
         messageListPanel.onPause();
     }
@@ -118,7 +122,21 @@ public class MessageFragment extends TFragment implements ModuleProxy {
     }
 
     public boolean onBackPressed() {
-        return inputPanel.collapse(true) || messageListPanel.onBackPressed();
+        if (inputPanel.collapse(true)) {
+            return true;
+        }
+
+        if (messageListPanel.onBackPressed()) {
+            return true;
+        }
+        if (forwardPanel.onBackPressed()) {
+            MessageListPanelEx.lable = 1;
+            messageListPanel.adapter.notifyDataSetChanged();
+            inputPanel.showLayout();
+            return true;
+        }
+
+        return false;
     }
 
     public void refreshMessageList() {
@@ -126,25 +144,28 @@ public class MessageFragment extends TFragment implements ModuleProxy {
     }
 
     private void parseIntent() {
-        Bundle arguments = getArguments();
-        sessionId = arguments.getString(Extras.EXTRA_ACCOUNT);
-        sessionType = (SessionTypeEnum) arguments.getSerializable(Extras.EXTRA_TYPE);
-        IMMessage anchor = (IMMessage) arguments.getSerializable(Extras.EXTRA_ANCHOR);
+        sessionId = getArguments().getString(Extras.EXTRA_ACCOUNT);
+        sessionType = (SessionTypeEnum) getArguments().getSerializable(Extras.EXTRA_TYPE);
+        IMMessage anchor = (IMMessage) getArguments().getSerializable(Extras.EXTRA_ANCHOR);
 
-        customization = (SessionCustomization) arguments.getSerializable(Extras.EXTRA_CUSTOMIZATION);
-        Container container = new Container(getActivity(), sessionId, sessionType, this, true);
+        customization = (SessionCustomization) getArguments().getSerializable(Extras.EXTRA_CUSTOMIZATION);
+        Container container = new Container(getActivity(), sessionId, sessionType, this);
 
         if (messageListPanel == null) {
-            messageListPanel = new MessageListPanelEx(container, rootView, anchor, false, false);
+            messageListPanel = new MessageListPanelEx(container, rootView, anchor, false, false,this);
         } else {
             messageListPanel.reload(container, anchor);
         }
 
         if (inputPanel == null) {
-            inputPanel = new InputPanel(container, rootView, getActionList());
+            inputPanel = new InputPanel(container, rootView, getActionList(),this);
             inputPanel.setCustomization(customization);
         } else {
             inputPanel.reload(container, customization);
+        }
+        //转发
+        if (forwardPanel == null) {
+            forwardPanel = new ForwardPanel(container,rootView);
         }
 
         initAitManager();
@@ -175,6 +196,9 @@ public class MessageFragment extends TFragment implements ModuleProxy {
         return customization.isAllowSendMessage(message);
     }
 
+    /**
+     * ****************** 观察者 **********************
+     */
 
     private void registerObservers(boolean register) {
         MsgServiceObserve service = NIMClient.getService(MsgServiceObserve.class);
@@ -191,26 +215,18 @@ public class MessageFragment extends TFragment implements ModuleProxy {
     Observer<List<IMMessage>> incomingMessageObserver = new Observer<List<IMMessage>>() {
         @Override
         public void onEvent(List<IMMessage> messages) {
-            onMessageIncoming(messages);
+            if (messages == null || messages.isEmpty()) {
+                return;
+            }
+            messageListPanel.onIncomingMessage(messages);
+            sendMsgReceipt(); // 发送已读回执
         }
     };
 
-    private void onMessageIncoming(List<IMMessage> messages) {
-        if (CommonUtil.isEmpty(messages)) {
-            return;
-        }
-        messageListPanel.onIncomingMessage(messages);
-        // 发送已读回执
-        messageListPanel.sendReceipt();
-    }
-
-    /**
-     * 已读回执观察者
-     */
     private Observer<List<MessageReceipt>> messageReceiptObserver = new Observer<List<MessageReceipt>>() {
         @Override
         public void onEvent(List<MessageReceipt> messageReceipts) {
-            messageListPanel.receiveReceipt();
+            receiveReceipt();
         }
     };
 
@@ -220,7 +236,13 @@ public class MessageFragment extends TFragment implements ModuleProxy {
      */
     @Override
     public boolean sendMessage(IMMessage message) {
-        if (isAllowSendMessage(message)) {
+        if (!isAllowSendMessage(message)) {
+            // 替换成tip
+            message = MessageBuilder.createTipMessage(message.getSessionId(), message.getSessionType());
+            message.setContent("该消息无法发送");
+            message.setStatus(MsgStatusEnum.success);
+            NIMClient.getService(MsgService.class).saveMessageToLocal(message, false);
+        } else {
             appendTeamMemberPush(message);
             message = changeToRobotMsg(message);
             final IMMessage msg = message;
@@ -242,19 +264,23 @@ public class MessageFragment extends TFragment implements ModuleProxy {
 
                 }
             });
-
-        } else {
-            // 替换成tip
-            message = MessageBuilder.createTipMessage(message.getSessionId(), message.getSessionType());
-            message.setContent("该消息无法发送");
-            message.setStatus(MsgStatusEnum.success);
-            NIMClient.getService(MsgService.class).saveMessageToLocal(message, false);
         }
 
+
         messageListPanel.onMsgSend(message);
+
         if (aitManager != null) {
             aitManager.reset();
         }
+
+        //发送消息外部回调
+        if (CommonUtil.classbroRobot.equals(sessionId)) {
+            CommonUtil.sendMessageCount++;
+            if (onSendMessageListener != null) {
+                onSendMessageListener.messageSend(message, new Date().getTime(), CommonUtil.sendMessageCount);
+            }
+        }
+
         return true;
     }
 
@@ -325,18 +351,16 @@ public class MessageFragment extends TFragment implements ModuleProxy {
 
     private void appendPushConfig(IMMessage message) {
         CustomPushContentProvider customConfig = NimUIKitImpl.getCustomPushContentProvider();
-        if (customConfig == null) {
-            return;
+        if (customConfig != null) {
+            String content = customConfig.getPushContent(message);
+            Map<String, Object> payload = customConfig.getPushPayload(message);
+            if (!TextUtils.isEmpty(content)) {
+                message.setPushContent(content);
+            }
+            if (payload != null) {
+                message.setPushPayload(payload);
+            }
         }
-        String content = customConfig.getPushContent(message);
-        Map<String, Object> payload = customConfig.getPushPayload(message);
-        if (!TextUtils.isEmpty(content)) {
-            message.setPushContent(content);
-        }
-        if (payload != null) {
-            message.setPushPayload(payload);
-        }
-
     }
 
     @Override
@@ -378,10 +402,10 @@ public class MessageFragment extends TFragment implements ModuleProxy {
 
     // 操作面板集合
     protected List<BaseAction> getActionList() {
-        List<BaseAction> actions = new ArrayList<>();
+        final List<BaseAction> actions = new ArrayList<>();
         actions.add(new ImageAction());
         actions.add(new VideoAction());
-        actions.add(new LocationAction());
+//        actions.add(new LocationAction());
 
         if (customization != null && customization.actions != null) {
             actions.addAll(customization.actions);
@@ -389,4 +413,28 @@ public class MessageFragment extends TFragment implements ModuleProxy {
         return actions;
     }
 
+    /**
+     * 发送已读回执
+     */
+    private void sendMsgReceipt() {
+        messageListPanel.sendReceipt();
+    }
+
+    /**
+     * 收到已读回执
+     */
+    public void receiveReceipt() {
+        messageListPanel.receiveReceipt();
+    }
+
+
+    OnSendMessageListener onSendMessageListener;
+
+    public interface OnSendMessageListener {
+        public void messageSend(IMMessage message, Long sendTime, int count);
+    }
+
+    public void setOnSendMessageListener(OnSendMessageListener onSendMessageListener) {
+        this.onSendMessageListener = onSendMessageListener;
+    }
 }

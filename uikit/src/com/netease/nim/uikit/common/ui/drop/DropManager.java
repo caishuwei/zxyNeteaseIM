@@ -54,7 +54,7 @@ public class DropManager {
 
     private Paint circlePaint; // 圆形画笔共享
 
-    private IDropListener innerListener; // 红点拖拽动画监听器
+    private IDropListener listener; // 红点拖拽动画监听器
 
     private boolean enable;
     private int[] explosionResIds = new int[]{
@@ -71,7 +71,7 @@ public class DropManager {
         this.statusBarHeight = ScreenUtil.getStatusBarHeight(context);
         this.dropCover = dropCover;
         this.dropCover.addDropCompletedListener(listener);
-        this.innerListener = null;
+        this.listener = null;
         this.enable = true;
 
         LogUtil.i(TAG, "init DropManager, statusBarHeight=" + statusBarHeight);
@@ -110,16 +110,14 @@ public class DropManager {
 
     public void setTouchable(boolean isTouchable) {
         this.isTouchable = isTouchable;
-        if (innerListener == null) {
-            return;
-        }
 
-        if (!isTouchable) {
-            innerListener.onDropBegin(); // touchable = false
-        } else {
-            innerListener.onDropEnd(); // touchable = true
+        if (listener != null) {
+            if (!isTouchable) {
+                listener.onDropBegin(); // touchable = false
+            } else {
+                listener.onDropEnd(); // touchable = true
+            }
         }
-
     }
 
     public int getTop() {
@@ -210,6 +208,6 @@ public class DropManager {
     }
 
     public void setDropListener(IDropListener listener) {
-        this.innerListener = listener;
+        this.listener = listener;
     }
 }

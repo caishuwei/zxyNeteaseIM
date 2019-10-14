@@ -10,7 +10,7 @@ import android.media.MediaPlayer.OnPreparedListener;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import androidx.appcompat.app.ActionBar;
+import android.support.v7.app.ActionBar;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.SurfaceHolder;
@@ -22,7 +22,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.netease.nim.uikit.common.ToastHelper;
+import android.widget.Toast;
 
 import com.netease.nim.uikit.R;
 import com.netease.nim.uikit.api.wrapper.NimToolBarOptions;
@@ -126,7 +126,7 @@ public class WatchVideoActivity extends UI implements Callback {
         setContentView(R.layout.nim_watch_video_activity);
 
         ToolBarOptions options = new NimToolBarOptions();
-        options.navigateId = R.drawable.nim_actionbar_white_back_icon;
+//        options.navigateId = R.drawable.nim_actionbar_white_back_icon;
         setToolBar(R.id.toolbar, options);
 
         parseIntent();
@@ -207,18 +207,18 @@ public class WatchVideoActivity extends UI implements Callback {
     }
 
     private void initActionbar() {
-        TextView menuBtn = findView(R.id.actionbar_menu);
-        if (isShowMenu) {
-            menuBtn.setVisibility(View.VISIBLE);
-            menuBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    WatchPicAndVideoMenuActivity.startActivity(WatchVideoActivity.this, message);
-                }
-            });
-        } else {
-            menuBtn.setVisibility(View.GONE);
-        }
+//        TextView menuBtn = findView(R.id.actionbar_menu);
+//        if (isShowMenu) {
+//            menuBtn.setVisibility(View.VISIBLE);
+//            menuBtn.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    WatchPicAndVideoMenuActivity.startActivity(WatchVideoActivity.this, message);
+//                }
+//            });
+//        } else {
+//            menuBtn.setVisibility(View.GONE);
+//        }
     }
 
     private void initVideoSize() {
@@ -335,7 +335,8 @@ public class WatchVideoActivity extends UI implements Callback {
                 if (isSurfaceCreated) {
                     mediaPlayer.setDisplay(surfaceHolder);
                 } else {
-                    ToastHelper.showToast(WatchVideoActivity.this, R.string.look_video_fail_try_again);
+                    Toast.makeText(WatchVideoActivity.this, R.string.look_video_fail_try_again,
+                            Toast.LENGTH_SHORT).show();
                     return;
                 }
             }
@@ -343,7 +344,8 @@ public class WatchVideoActivity extends UI implements Callback {
             try {
                 mediaPlayer.setDataSource(videoFilePath);
             } catch (Exception e) {
-                ToastHelper.showToast(WatchVideoActivity.this, R.string.look_video_fail_try_again);
+                Toast.makeText(WatchVideoActivity.this, R.string.look_video_fail_try_again,
+                        Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
                 return;
             }
@@ -378,7 +380,8 @@ public class WatchVideoActivity extends UI implements Callback {
                     startActivity(intent);
                     finish();
                 } catch (Exception e) {
-                    ToastHelper.showToastLong(WatchVideoActivity.this, R.string.look_video_fail);
+                    Toast.makeText(WatchVideoActivity.this, R.string.look_video_fail,
+                            Toast.LENGTH_SHORT).show();
                 }
                 return true;
             }
@@ -528,7 +531,7 @@ public class WatchVideoActivity extends UI implements Callback {
         downloadFuture = null;
 
         downloadLayout.setVisibility(View.GONE);
-        ToastHelper.showToast(WatchVideoActivity.this, R.string.download_video_fail);
+        Toast.makeText(WatchVideoActivity.this, R.string.download_video_fail, Toast.LENGTH_SHORT).show();
     }
 
     private void onDownloadStart(IMMessage message) {

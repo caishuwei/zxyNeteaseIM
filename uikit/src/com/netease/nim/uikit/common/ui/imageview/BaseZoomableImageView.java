@@ -33,16 +33,17 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.os.Build;
 import android.os.SystemClock;
-import androidx.viewpager.widget.ViewPager;
+import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
+import android.widget.ImageView;
 
 import com.netease.nim.uikit.common.util.media.SampleSizeUtil;
 
-public abstract class BaseZoomableImageView extends View {
+public abstract class BaseZoomableImageView extends ImageView {
     // Statics
     static final float sPanRate = 7;
     static final float sScaleRate = 1.25F;
