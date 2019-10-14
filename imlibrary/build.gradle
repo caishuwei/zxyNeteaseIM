@@ -96,8 +96,8 @@ dependencies {
         exclude group: 'com.android.support' //exclude 可以解决 lib冲突的问题。
     }
     testImplementation 'junit:junit:4.12'
-    implementation project(path: ':uikit')
-    implementation project(':avchatkit')
+    api project(path: ':uikit')
+    api project(':avchatkit')
 
     implementation 'com.google.firebase:firebase-messaging:11.6.0'
     implementation 'com.google.android.gms:play-services-base:11.6.0'
@@ -118,9 +118,9 @@ dependencies {
     }
 
     // ViewModel and LiveData
-    implementation "android.arch.lifecycle:extensions:1.1.0"
+    implementation "android.arch.lifecycle:extensions:1.1.1"
     // Java8 support for Lifecycles
-    implementation "android.arch.lifecycle:common-java8:1.1.0"
+    implementation "android.arch.lifecycle:common-java8:1.1.1"
 }
 
 //apply plugin: 'com.google.gms.google-services'

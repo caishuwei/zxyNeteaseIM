@@ -1,4 +1,4 @@
-include ':app'
+include ':app', ':zxylibrary'
 include ':imlibrary'
 include ':uikit'
 include ':filepicker'

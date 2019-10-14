@@ -1,0 +1,50 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.1"
+
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation("com.android.support:appcompat-v7:${V7_APPCOMPAT_VERSION}")
+
+    // 添加依赖。注意，版本号必须一致。
+    // 基础功能 (必需)
+    api 'com.netease.nimlib:basesdk:6.8.0'
+    // 音视频和互动白板服务需要
+    api 'com.netease.nimlib:nrtc:6.8.0'
+    // 音视频需要
+    api 'com.netease.nimlib:avchat:6.8.0'
+    // 聊天室需要
+    api 'com.netease.nimlib:chatroom:6.8.0'
+    // 互动白板服务需要
+    api 'com.netease.nimlib:rts:6.8.0'
+    // 全文检索服务需要
+    api 'com.netease.nimlib:lucene:6.8.0'
+    // 小米等厂商推送需要
+    api 'com.netease.nimlib:push:6.8.0'
+
+}
