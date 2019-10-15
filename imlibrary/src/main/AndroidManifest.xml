@@ -381,6 +381,7 @@
 
         <!-- 云信进程间通信service -->
         <service android:name="com.netease.nimlib.service.ResponseService" />
+        
 
         <!-- 云信进程间通信provider -->
         <!-- android:authorities="{包名}.ipc.provider", 请将com.classbro.marketing替换为自己的包名 -->
