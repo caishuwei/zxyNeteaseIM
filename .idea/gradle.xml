@@ -8,6 +8,20 @@
         </compositeConfiguration>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
+=======
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/avchatkit" />
+            <option value="$PROJECT_DIR$/faceunity" />
+            <option value="$PROJECT_DIR$/filepicker" />
+            <option value="$PROJECT_DIR$/imlibrary" />
+            <option value="$PROJECT_DIR$/uikit" />
+          </set>
+        </option>
+>>>>>>> parent of 82274238... 完成
         <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>

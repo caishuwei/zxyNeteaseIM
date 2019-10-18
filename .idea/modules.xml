@@ -9,6 +9,10 @@
       <module fileurl="file://$PROJECT_DIR$/imlibrary/imlibrary.iml" filepath="$PROJECT_DIR$/imlibrary/imlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/uikit/uikit.iml" filepath="$PROJECT_DIR$/uikit/uikit.iml" />
       <module fileurl="file://$PROJECT_DIR$/zxyNeteaseIM.iml" filepath="$PROJECT_DIR$/zxyNeteaseIM.iml" />
+<<<<<<< HEAD
+=======
+      <module fileurl="file://$PROJECT_DIR$/zxylibrary/zxylibrary.iml" filepath="$PROJECT_DIR$/zxylibrary/zxylibrary.iml" />
+>>>>>>> parent of 82274238... 完成
     </modules>
   </component>
 </project>
